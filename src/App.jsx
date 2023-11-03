@@ -1,11 +1,10 @@
 import "./index.css";
+import MainRoutes from "./Routes/MainRoutes";
 
 function App() {
   return (
     <>
-      <div>
-        <h2>Hello world</h2>
-      </div>
+      <MainRoutes />
     </>
   );
 }
