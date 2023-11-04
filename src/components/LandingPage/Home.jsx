@@ -51,8 +51,21 @@ function Home() {
       <main>
         <section className="section-hero">
           <div className="container">
-            <div className="hero-text-box">text</div>
-            <div className="hero-image-box">image</div>
+            <div className="hero-text-box">
+              <h1 className="primiry-heading">
+                Discover Peaceful Escapes with Lounge: Your Gateway to Tranquil
+                Retreats and Comfort.
+              </h1>
+              <p className="hero-description">
+                Unlock the Ultimate Relaxation Experience with LoungeLink. Your
+                Gateway to Discovering Comfortable Lounges, Where You Can
+                Unwind, Connect, and Make Every Moment Count. Start Your Journey
+                to Relaxation Today.
+              </p>
+            </div>
+            <div className="hero-image-box">
+              <img src="../../assets/hero.jpg" alt="A photo of beach scenary" />
+            </div>
           </div>
         </section>
       </main>
