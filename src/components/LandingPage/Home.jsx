@@ -4,7 +4,7 @@ function Home() {
     <div className="home">
       <header className="home-section-header">
         <a href="#" className="home-logo">
-          Lounge
+          Lou<span>nge</span>
         </a>
         <nav className="home-nav">
           <ul className="home-nav-list">
@@ -25,12 +25,17 @@ function Home() {
             </li>
             <li>
               <a className="home-nav-link" href="#">
-                About us
+                Admin
               </a>
             </li>
             <li>
               <a className="home-nav-link" href="#">
-                About us
+                Log in
+              </a>
+            </li>
+            <li>
+              <a className="home-nav-link" href="#">
+                Sign Up
               </a>
             </li>
           </ul>
