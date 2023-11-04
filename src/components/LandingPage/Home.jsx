@@ -23,18 +23,24 @@ function Home() {
                 services
               </a>
             </li>
+
             <li>
               <a className="home-nav-link" href="#">
+                contact
+              </a>
+            </li>
+            <li>
+              <a className="home-nav-link home-nav--admin" href="#">
                 Admin
               </a>
             </li>
             <li>
               <a className="home-nav-link" href="#">
-                Log in
+                Log In
               </a>
             </li>
             <li>
-              <a className="home-nav-link" href="#">
+              <a className="home-nav-link home-nav--cta" href="#">
                 Sign Up
               </a>
             </li>

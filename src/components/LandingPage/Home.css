@@ -16,16 +16,23 @@
 .home-logo:visited {
   display: inline-block;
   text-decoration: none;
-  font-size: 2.4rem;
-  font-weight: 400;
+  font-size: 3rem;
+  font-weight: 700;
   color: #333;
   font-family: "Playfair Display", serif;
+  letter-spacing: 2px;
+  color: #e67700;
 }
 
 .home-logo:hover,
 .home-logo:active {
-  color: #333;
+  color: #e67700;
 }
+
+/* .home-logo span{
+  color: #333;
+  font-size: 2.4rem;
+} */
 
 .home-nav-list {
   display: flex;
@@ -42,14 +49,32 @@
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: 500;
-  color: #333;
+  color: #444;
 
   transition: all 0.3s ease-in;
 }
 
+.home-nav--admin {
+  margin-left: 4.8rem;
+}
+
 .home-nav-link:hover,
 .home-nav-link:active {
-  color: #e47f57;
+  color: #e67700;
+}
+
+.home-nav--cta:link,
+.home-nav--cta:visited {
+  background-color: #e67700;
+  color: #fff;
+  padding: 1.6rem 3.2rem;
+  border-radius: 8px;
+}
+
+.home-nav--cta:hover,
+.home-nav--cta:hover {
+  background-color: #cf6b00;
+  color: #fff;
 }
 
 /* - FONT SIZE SYSTEM (px)
