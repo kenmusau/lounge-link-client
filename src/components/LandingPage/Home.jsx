@@ -1,8 +1,41 @@
 import "./Home.css";
 function Home() {
   return (
-    <div className="app">
-      <h1>Hello world</h1>
+    <div className="home">
+      <header className="home-section-header">
+        <a href="#" className="home-logo">
+          Lounge
+        </a>
+        <nav className="home-nav">
+          <ul className="home-nav-list">
+            <li>
+              <a className="home-nav-link" href="#">
+                Home
+              </a>
+            </li>
+            <li>
+              <a className="home-nav-link" href="#">
+                About us
+              </a>
+            </li>
+            <li>
+              <a className="home-nav-link" href="#">
+                services
+              </a>
+            </li>
+            <li>
+              <a className="home-nav-link" href="#">
+                About us
+              </a>
+            </li>
+            <li>
+              <a className="home-nav-link" href="#">
+                About us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </div>
   );
 }
