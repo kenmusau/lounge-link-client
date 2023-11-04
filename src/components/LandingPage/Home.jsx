@@ -47,6 +47,15 @@ function Home() {
           </ul>
         </nav>
       </header>
+
+      <main>
+        <section className="section-hero">
+          <div className="container">
+            <div className="hero-text-box">text</div>
+            <div className="hero-image-box">image</div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
