@@ -64,7 +64,9 @@ function Home() {
                 Comfortable Lounges, Where You Can Unwind, Connect, and Make
                 Every Moment Count.
               </p>
-              <a href="#">Book Now</a>
+              <a href="#" className="btn hero-btn--cta">
+                <span>Book Now</span> &rarr;
+              </a>
             </div>
             <div className="hero-image-box">
               <img src={heroImage} alt="A photo of beach scenary" />
