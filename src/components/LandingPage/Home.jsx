@@ -1,11 +1,18 @@
 import "./Home.css";
 
+// Partner log
 import heroImage from "../../assets/hero2.jpg";
 import choice from "../../assets/patners/choice.png";
 import wynn from "../../assets/patners/wynn.png";
 import swiss from "../../assets/patners/swiss.png";
 import lowes from "../../assets/patners/lowes.png";
 import sofitel from "../../assets/patners/sofitel.png";
+
+// Popular Hotels
+
+import hotel from "../../assets/hotels/hotel-1.jpg";
+import hote2 from "../../assets/hotels/hotel-2.jpg";
+import hote3 from "../../assets/hotels/hotel-3.jpg";
 
 function Home() {
   return (
@@ -97,7 +104,24 @@ function Home() {
             </div>
           </div>
         </section>
-        <section className="section-popular"></section>
+        <section className="section-popular">
+          <div className="container">
+            <h2 className="heading-secondary popular-heading">
+              Our Most Popular Selections
+            </h2>
+            <div className="popular-hotels">
+              <div className="popular-hotel-image">
+                <img src={hotel} alt="hotel one image" />
+              </div>
+              <div className="popular-hotel-image">
+                <img src={hotel} alt="hotel one image" />
+              </div>
+              <div className="popular-hotel-image">
+                <img src={hotel} alt="hotel one image" />
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="section-testimonials"></section>
         <section className="section-services"></section>
       </main>
