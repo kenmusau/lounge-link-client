@@ -204,11 +204,20 @@
 .popular-hotels {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4.8rem;
+  gap: 5.2rem;
 }
 
 .popular-hotel-image img {
   width: 100%;
+  margin-bottom: 2rem;
+}
+
+.hotel-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  font-size: 1.6rem;
 }
 /* - FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98

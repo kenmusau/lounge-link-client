@@ -11,8 +11,8 @@ import sofitel from "../../assets/patners/sofitel.png";
 // Popular Hotels
 
 import hotel from "../../assets/hotels/hotel-1.jpg";
-import hote2 from "../../assets/hotels/hotel-2.jpg";
-import hote3 from "../../assets/hotels/hotel-3.jpg";
+import hotel2 from "../../assets/hotels/hotel-2.jpg";
+import hotel4 from "../../assets/hotels/hotel-4.jpg";
 
 function Home() {
   return (
@@ -112,12 +112,27 @@ function Home() {
             <div className="popular-hotels">
               <div className="popular-hotel-image">
                 <img src={hotel} alt="hotel one image" />
+                <div className="hotel-text">
+                  <p className="hotel-nam">Ice Hotel</p>
+                  <p className="hotel-location">Athiriver, Kajiado</p>
+                  <p className="hotel-price">$500</p>
+                </div>
               </div>
               <div className="popular-hotel-image">
-                <img src={hotel} alt="hotel one image" />
+                <img src={hotel2} alt="hotel one image" />
+                <div className="hotel-text">
+                  <p className="hotel-nam">Gates Hotel</p>
+                  <p className="hotel-location">Kitengela, Kajiado</p>
+                  <p className="hotel-price">$500</p>
+                </div>
               </div>
               <div className="popular-hotel-image">
-                <img src={hotel} alt="hotel one image" />
+                <img src={hotel4} alt="hotel one image" />
+                <div className="hotel-text">
+                  <p className="hotel-price">$500</p>
+                  <p className="hotel-nam">Sarova Hotel</p>
+                  <p className="hotel-location">Kinoo, Kiambu</p>
+                </div>
               </div>
             </div>
           </div>
