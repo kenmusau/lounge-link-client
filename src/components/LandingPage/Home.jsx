@@ -1,4 +1,5 @@
 import "./Home.css";
+// import { CiLocationOn } from "react-icons/ci";
 
 // Partner log
 import heroImage from "../../assets/hero2.jpg";
@@ -131,9 +132,9 @@ function Home() {
               <div className="popular-hotel-data">
                 <img src={hotel4} alt="hotel one image" />
                 <div className="hotel-text">
-                  <p className="hotel-price">$500 Per Night</p>
                   <p className="hotel-name">Sarova Hotel</p>
                   <p className="hotel-location">Kinoo, Kiambu</p>
+                  <p className="hotel-price">$500 Per Night</p>
                 </div>
               </div>
 
@@ -156,9 +157,9 @@ function Home() {
               <div className="popular-hotel-data">
                 <img src={hotel3} alt="hotel one image" />
                 <div className="hotel-text">
-                  <p className="hotel-price">$500 Per Night</p>
                   <p className="hotel-name">Sarova Hotel</p>
                   <p className="hotel-location">Kinoo, Kiambu</p>
+                  <p className="hotel-price">$500 Per Night</p>
                 </div>
               </div>
             </div>
