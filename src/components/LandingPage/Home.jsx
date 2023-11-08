@@ -110,7 +110,7 @@ function Home() {
               Our Most Popular Selections
             </h2>
             <div className="popular-hotels">
-              <div className="popular-hotel-image">
+              <div className="popular-hotel-data">
                 <img src={hotel} alt="hotel one image" />
                 <div className="hotel-text">
                   <p className="hotel-nam">Ice Hotel</p>
@@ -118,7 +118,7 @@ function Home() {
                   <p className="hotel-price">$500</p>
                 </div>
               </div>
-              <div className="popular-hotel-image">
+              <div className="popular-hotel-data">
                 <img src={hotel2} alt="hotel one image" />
                 <div className="hotel-text">
                   <p className="hotel-nam">Gates Hotel</p>
@@ -126,7 +126,7 @@ function Home() {
                   <p className="hotel-price">$500</p>
                 </div>
               </div>
-              <div className="popular-hotel-image">
+              <div className="popular-hotel-data">
                 <img src={hotel4} alt="hotel one image" />
                 <div className="hotel-text">
                   <p className="hotel-price">$500</p>
