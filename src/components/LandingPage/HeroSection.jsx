@@ -1,7 +1,7 @@
 import "./Home.css";
 
 // Partner log
-import heroImage from "../../assets/hero2.jpg";
+import heroImage from "../../assets/hero3.jpg";
 
 function HeroSection() {
   return (

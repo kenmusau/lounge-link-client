@@ -36,7 +36,7 @@ function Header() {
               </a>
             </li> */}
             <li>
-              <a className="home-nav-link" href="#">
+              <a className="home-nav-link home-nav--login" href="#">
                 Log In
               </a>
             </li>
