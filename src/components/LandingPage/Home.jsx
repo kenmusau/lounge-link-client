@@ -7,6 +7,7 @@ import FeatureSection from "./FeatureSection";
 import PopularSection from "./PopularSection";
 import TestimonialSection from "./TestimonialSection";
 import ServiceSection from "./ServiceSection";
+import Footer from "./Footer";
 
 function Home() {
   return (
@@ -16,9 +17,10 @@ function Home() {
         <HeroSection />
         <FeatureSection />
         <PopularSection />
-        <TestimonialSection />
         <ServiceSection />
+        <TestimonialSection />
       </main>
+      <Footer />
     </div>
   );
 }

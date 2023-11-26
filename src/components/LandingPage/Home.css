@@ -246,6 +246,7 @@
 /* Section testmionials */
 
 .section-testimonials {
+  background-color: #f8f9fa;
   padding: 6.2rem;
 }
 
@@ -309,7 +310,7 @@
 /*  Services section*/
 
 .section-services {
-  background-color: #f8f9fa;
+  /* background-color: #f8f9fa; */
   padding: 6.2rem;
 }
 
@@ -334,6 +335,13 @@
 
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+.service-card:nth-child(2) {
+  box-shadow: 0 0.6rem 5.8rem rgba(0, 0, 0, 0.1);
+  padding: 5rem 0;
+  border-radius: 11px;
 }
 
 .service-icon {
@@ -344,7 +352,65 @@
 .service-name {
   font-size: 2rem;
   font-weight: 500;
-  color: #444;
+  color: #001d3d;
+}
+/* Footer */
+.footer {
+  background-color: #582f0e;
+  color: #fff;
+  padding: 6.2rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6.4rem;
+  place-items: center;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-logo p {
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+
+.social-icons {
+  display: flex;
+  gap: 3.2rem;
+  font-size: 2rem;
+
+  cursor: pointer;
+}
+
+.footer-container h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  list-style: none;
+}
+
+.footer-container ul li a:link,
+.footer-container ul li a:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #868e96;
+}
+
+.footer-container ul li a:hover,
+.footer-container ul li a:active {
+  color: #e28a38;
 }
 /* - FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
