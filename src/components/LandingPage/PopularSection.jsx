@@ -10,7 +10,7 @@ import hotel5 from "../../assets/hotels/hotel-5.jpg";
 
 function PopularSection() {
   return (
-    <div>
+    
       <section className="section-popular">
         <div className="container">
           <h2 className="heading-secondary popular-heading">
@@ -69,7 +69,6 @@ function PopularSection() {
           </div>
         </div>
       </section>
-    </div>
   );
 }
 

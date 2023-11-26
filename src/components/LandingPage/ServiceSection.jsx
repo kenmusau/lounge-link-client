@@ -1,11 +1,7 @@
 import "./Home.css";
 
 function ServiceSection() {
-  return (
-    <div>
-      <section className="section-services"></section>
-    </div>
-  );
+  return <section className="section-services"></section>;
 }
 
 export default ServiceSection;

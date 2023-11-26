@@ -212,6 +212,7 @@
   border-radius: 11px;
 
   overflow: hidden;
+  cursor: pointer;
 }
 .popular-hotel-data img {
   width: 100%;
@@ -239,6 +240,69 @@
 
 .hotel-price {
   font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* Section testmionials */
+
+.section-testimonials {
+  padding: 6.2rem;
+}
+
+.testimonial-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5.2rem;
+}
+
+.testimonial-card img {
+  height: 6rem;
+  width: 6rem;
+
+  border-radius: 50%;
+  align-self: center;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  /* border: 1px solid #adb5bd;*/
+  box-shadow: 0 0.6rem 5.8rem rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  padding: 1.5rem;
+}
+
+.testimony-title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e67700;
+}
+
+.testimony-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.testimony {
+  line-height: 1.9;
+  font-size: 1.5rem;
+  color: #495057;
+}
+
+.person-name {
+  font-size: 1.3rem;
   font-style: italic;
 }
 /* - FONT SIZE SYSTEM (px)
