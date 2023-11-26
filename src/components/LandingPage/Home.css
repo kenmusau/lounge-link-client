@@ -121,7 +121,7 @@
 }
 
 .heading-primary span {
-  color: #eb9233;
+  color: #f4c28d;
 }
 
 .hero-description {
@@ -304,6 +304,47 @@
 .person-name {
   font-size: 1.3rem;
   font-style: italic;
+}
+
+/*  Services section*/
+
+.section-services {
+  background-color: #f8f9fa;
+  padding: 6.2rem;
+}
+
+.services-subtitle {
+  text-align: center;
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 6rem;
+  letter-spacing: 1.6px;
+}
+
+.services-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon {
+  font-size: 6.2rem;
+  color: #e28a38;
+}
+
+.service-name {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #444;
 }
 /* - FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
