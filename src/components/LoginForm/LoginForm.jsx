@@ -3,10 +3,13 @@ import { useForm } from "react-hook-form";
 import loginPic from "../../assets/loginPic.png";
 import { baseurl } from "../../utils";
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
 
 function LoginForm() {
   const [error, setError] = useState([]);
   const { register, handleSubmit } = useForm();
+
+  const navigate = Navigate();
 
   const onSubmit = (data) => {
     const user = {
@@ -29,6 +32,7 @@ function LoginForm() {
       const data = await response.json();
       if (response.ok) {
         console.log(data);
+        navigate("/clientDashboard");
       } else {
         setError(data.error);
       }
