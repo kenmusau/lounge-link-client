@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 function Header() {
@@ -35,9 +36,9 @@ function Header() {
               </a>
             </li> */}
           <li>
-            <a className="home-nav-link home-nav--login" href="#">
+            <Link to="login" className="home-nav-link home-nav--login" href="#">
               Log In
-            </a>
+            </Link>
           </li>
           <li>
             <a className="home-nav-link home-nav--cta" href="#">
