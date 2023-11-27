@@ -1,11 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../components/LandingPage/Home";
+// import Home from "../components/LandingPage/Home";
+import LoginForm from "../components/LoginForm/LoginForm";
 
 function MainRoutes() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<LoginForm />} />
       </Routes>
     </div>
   );
