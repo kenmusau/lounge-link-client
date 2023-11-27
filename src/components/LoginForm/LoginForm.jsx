@@ -2,8 +2,10 @@ import "./LoginForm.css";
 import { useForm } from "react-hook-form";
 import loginPic from "../../assets/loginPic.png";
 import { baseurl } from "../../utils";
+import { useState } from "react";
 
 function LoginForm() {
+  const [error, setError] = useState([]);
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
@@ -24,8 +26,12 @@ function LoginForm() {
         },
       });
 
-      const json = await response.json();
-      console.log(json);
+      const data = await response.json();
+      if (response.ok) {
+        console.log(data);
+      } else {
+        setError(data.error);
+      }
     } catch (error) {
       console.error("Error during login:", error);
     }
@@ -57,6 +63,11 @@ function LoginForm() {
           />
 
           <button className="form-submit">Submit</button>
+          {error.map((error, i) => (
+            <p key={i} className="form-error">
+              {error}
+            </p>
+          ))}
         </form>
       </div>
     </section>
