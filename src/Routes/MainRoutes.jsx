@@ -9,7 +9,7 @@ function MainRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginForm />} />
-        <Route path="/clientDashboard" element={<ClientDashBoard />} />
+        <Route path="/dashboard" element={<ClientDashBoard />} />
       </Routes>
     </div>
   );
