@@ -1,24 +1,21 @@
 .login-form-section {
   font-size: 2rem;
-  background-color: #edf2f4;
-  height: 100vh;
   color: #444;
 
+  background-image: linear-gradient(to right, #fff, #fdf1e6);
+
+  /* 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .login-form-container {
   padding: 6.2rem;
-  max-width: 1400px;
-  margin: 0 auto;
-
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-
-  gap: 6.8rem;
 }
 
 .form label {
@@ -30,9 +27,11 @@
   display: block;
   margin-bottom: 2rem;
   border-radius: 10px;
-  padding: 1rem 0.5rem;
+  padding: 0 0.5rem;
+  height: 5rem;
   width: 60%;
   border-radius: 1px solid #444;
+  font-size: 1.5rem;
 }
 
 .form h2 {
@@ -43,7 +42,7 @@
   text-align: center;
 }
 .login-image img {
-  width: 100%;
+  width: 60rem;
 }
 
 .form-submit {
