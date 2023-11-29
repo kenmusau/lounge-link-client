@@ -2,12 +2,15 @@ import "./LoginForm.css";
 import { useForm } from "react-hook-form";
 import loginPic from "../../assets/loginPic.png";
 import { baseurl } from "../../utils";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { ClientContext } from "../../context/Client";
 
 function LoginForm() {
   const [error, setError] = useState([]);
   const { register, handleSubmit } = useForm();
+
+  const { setClient } = useContext(ClientContext);
 
   const navigate = useNavigate();
 
@@ -21,7 +24,7 @@ function LoginForm() {
 
   async function loginUser(user) {
     try {
-      const response = await fetch(`${baseurl}/clientLogin`, {
+      const response = await fetch(`${baseurl}/login`, {
         method: "POST",
         body: JSON.stringify(user),
         headers: {
@@ -31,6 +34,7 @@ function LoginForm() {
 
       const data = await response.json();
       if (response.ok) {
+        setClient(data);
         console.log(data);
         navigate("/dashboard");
       } else {
@@ -72,6 +76,9 @@ function LoginForm() {
               {error}
             </p>
           ))}
+          <p>
+            Have no account? <Link to="/signup">Sign Up</Link>
+          </p>
         </form>
       </div>
     </section>

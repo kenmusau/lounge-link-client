@@ -1,0 +1,44 @@
+.client-signup-container {
+  background-color: #f5c999;
+  height: 100vh;
+  font-size: 3rem;
+  display: grid;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.client-signup {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+.client-signup label {
+  display: block;
+}
+
+.client-signup input {
+  font-size: 2rem;
+  height: 4rem;
+  width: 40rem;
+  border-radius: 11px;
+  padding: 1rem;
+}
+
+.client-signup-container button {
+  display: block;
+  background-color: #e67700;
+  padding: 1.6rem;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+
+  transition: all 1s ease-in;
+}
+
+.client-signup-container button:hover {
+  background-color: #8a4700;
+}
