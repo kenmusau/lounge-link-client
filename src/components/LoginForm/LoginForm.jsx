@@ -2,12 +2,12 @@ import "./LoginForm.css";
 import { useForm } from "react-hook-form";
 import loginPic from "../../assets/loginPic.png";
 import { baseurl } from "../../utils";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ClientContext } from "../../context/Client";
 
 function LoginForm() {
-  const [error, setError] = useState([]);
+  // const [error, setError] = useState([]);
   const { register, handleSubmit } = useForm();
 
   const { setClient } = useContext(ClientContext);
@@ -34,11 +34,13 @@ function LoginForm() {
 
       const data = await response.json();
       if (response.ok) {
-        setClient(data);
-        console.log(data);
+        setClient(data.client);
+        localStorage.setItem("jwt", data.jwt);
+        console.log(data.client);
         navigate("/dashboard");
       } else {
-        setError(data.error);
+        // setError(data?.error);
+        console.log("error here", data);
       }
     } catch (error) {
       console.error("Error during login:", error);
@@ -71,11 +73,11 @@ function LoginForm() {
           />
 
           <button className="form-submit">Submit</button>
-          {error.map((error, i) => (
+          {/* {error.map((error, i) => (
             <p key={i} className="form-error">
               {error}
             </p>
-          ))}
+          ))} */}
           <p>
             Have no account? <Link to="/signup">Sign Up</Link>
           </p>

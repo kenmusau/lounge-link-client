@@ -10,7 +10,7 @@ function SignUp() {
       username: data.username,
       first_name: data.First_name,
       last_name: data.last_name,
-      password_digest: data.password,
+      password: data.password,
     };
 
     fetch(`${baseurl}/clients`, {

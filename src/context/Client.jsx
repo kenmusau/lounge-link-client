@@ -8,13 +8,23 @@ function ClientProvider({ children }) {
   const [client, setClient] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  console.log(client);
+
+  const token = localStorage.getItem("jwt");
+
   useEffect(() => {
     fetchClient();
-  }, [setClient]); // Empty dependency array for a one-time effect
+  }, []); // Empty dependency array for a one-time effect
 
   async function fetchClient() {
     try {
-      const resp = await fetch(`${baseurl}/theLoggedInClient`);
+      const resp = await fetch(`${baseurl}/theLoggedInClient`, {
+        method: "GET",
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          Authorization: `Bearer ${token}`, // Added Authorization header
+        },
+      });
       const clientData = await resp.json();
       setClient(clientData);
     } catch (error) {
