@@ -1,0 +1,14 @@
+.admin {
+  font-size: 5rem;
+}
+
+.admin button {
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  background-color: brown;
+  color: #fff;
+}
+
+.admin button:hover {
+  background-color: burlywood;
+}

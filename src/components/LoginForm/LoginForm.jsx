@@ -4,7 +4,7 @@ import loginPic from "../../assets/loginPic.png";
 import { baseurl } from "../../utils";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ClientContext } from "../../context/Client";
+import { ClientContext } from "../../context/User";
 
 function LoginForm() {
   // const [error, setError] = useState([]);
@@ -15,6 +15,7 @@ function LoginForm() {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
+    console.log(data);
     const user = {
       username: data.username,
       password: data.password,
@@ -34,10 +35,17 @@ function LoginForm() {
 
       const data = await response.json();
       if (response.ok) {
-        setClient(data.client);
+        const user = data.user;
         localStorage.setItem("jwt", data.jwt);
-        console.log(data.client);
-        navigate("/dashboard");
+        if (user.role === "admin") {
+          setClient(user);
+          console.log(user.role);
+          navigate("/adminDash");
+        } else {
+          setClient(user);
+          console.log(user.role);
+          navigate("/dashboard");
+        }
       } else {
         // setError(data?.error);
         console.log("error here", data);

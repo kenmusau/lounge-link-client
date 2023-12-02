@@ -18,7 +18,7 @@ function ClientProvider({ children }) {
 
   async function fetchClient() {
     try {
-      const resp = await fetch(`${baseurl}/theLoggedInClient`, {
+      const resp = await fetch(`${baseurl}/currentUser`, {
         method: "GET",
         headers: {
           "Content-type": "application/json; charset=UTF-8",

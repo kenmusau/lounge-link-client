@@ -11,9 +11,10 @@ function SignUp() {
       first_name: data.First_name,
       last_name: data.last_name,
       password: data.password,
+      role: "client",
     };
 
-    fetch(`${baseurl}/clients`, {
+    fetch(`${baseurl}/users`, {
       method: "POST",
       headers: {
         Authorization: `Bearer my_s3cr3t`,
