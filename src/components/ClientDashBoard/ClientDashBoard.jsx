@@ -3,6 +3,14 @@ import { useContext } from "react";
 import { UserContext } from "../../context/User";
 import { useNavigate } from "react-router-dom";
 
+// icons
+import { MdDashboardCustomize } from "react-icons/md";
+import { BsFillHouseAddFill } from "react-icons/bs";
+import { BsBookmarkStarFill } from "react-icons/bs";
+import { FaHistory } from "react-icons/fa";
+import { MdManageAccounts } from "react-icons/md";
+import { RiLogoutBoxFill } from "react-icons/ri";
+
 function ClientDashBoard() {
   const { user, setUser } = useContext(UserContext);
 
@@ -21,23 +29,42 @@ function ClientDashBoard() {
         <div className="client-sidebar">
           <ul>
             <li>
-              <a href="#">Dashboard</a>
+              <div className="client-sidebar--icon">
+                <MdDashboardCustomize className="sidebar-icon" />
+                <a href="#">Dashboard</a>
+              </div>
             </li>
             <li>
-              <a href="#">Spaces</a>
+              <div className="client-sidebar--icon">
+                <BsFillHouseAddFill />
+                <a href="#">Spaces</a>
+              </div>
             </li>
             <li>
-              <a href="#">WishList</a>
+              <div className="client-sidebar--icon">
+                <BsBookmarkStarFill />
+                <a href="#">WishList</a>
+              </div>
             </li>
             <li>
-              <a href="#">Visited</a>
+              <div className="client-sidebar--icon">
+                <FaHistory />
+                <a href="#">Visited</a>
+              </div>
             </li>
             <li>
-              <a href="#">settings</a>
+              <div className="client-sidebar--icon">
+                <MdManageAccounts />
+
+                <a href="#">settings</a>
+              </div>
             </li>
             <li>
               {/* <a href="#">Dasbhoard</a> */}
-              <a onClick={handleLogout}>Logout</a>
+              <div className="client-sidebar--icon">
+                <RiLogoutBoxFill />
+                <a onClick={handleLogout}>Logout</a>
+              </div>
             </li>
           </ul>
         </div>
