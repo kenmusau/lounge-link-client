@@ -10,25 +10,34 @@
 
 .client-sidebar {
   background-color: #14213d;
+  padding: 2rem 0;
 }
 
-.client-sidebar li {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
 .client-sidebar li a,
 .client-sidebar li a:link,
 .client-sidebar li a:visited {
   display: inline-block;
   text-decoration: none;
-  font-size: 2rem;
-  padding: 1.6rem 3.2rem;
+  font-size: 1.9rem;
+  padding: 1.2rem;
   color: #f1f3f5;
 
   transition: all 0.3s;
 }
 
+.client-sidebar li a:hover,
+.client-sidebar li a:active {
+  color: #adb5bd;
+}
+
+.client-sidebar ul {
+  padding: 2rem;
+  list-style: none;
+}
+
 .client-sidebar li:hover {
-  background-color: #343a40;
+  background-color: #49505742;
+  border-radius: 11px;
+  color: #343a40;
+  cursor: pointer;
 }
