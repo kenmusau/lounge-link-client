@@ -36,33 +36,32 @@ function ClientDashBoard() {
             </li>
             <li>
               <div className="client-sidebar--icon">
-                <BsFillHouseAddFill />
+                <BsFillHouseAddFill className="sidebar-icon" />
                 <a href="#">Spaces</a>
               </div>
             </li>
             <li>
               <div className="client-sidebar--icon">
-                <BsBookmarkStarFill />
+                <BsBookmarkStarFill className="sidebar-icon" />
                 <a href="#">WishList</a>
               </div>
             </li>
             <li>
               <div className="client-sidebar--icon">
-                <FaHistory />
+                <FaHistory className="sidebar-icon" />
                 <a href="#">Visited</a>
               </div>
             </li>
             <li>
               <div className="client-sidebar--icon">
-                <MdManageAccounts />
-
+                <MdManageAccounts className="sidebar-icon" />
                 <a href="#">settings</a>
               </div>
             </li>
             <li>
               {/* <a href="#">Dasbhoard</a> */}
               <div className="client-sidebar--icon">
-                <RiLogoutBoxFill />
+                <RiLogoutBoxFill className="client-logout" />
                 <a onClick={handleLogout}>Logout</a>
               </div>
             </li>

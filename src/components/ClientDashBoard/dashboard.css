@@ -58,3 +58,11 @@
 .client-sidebar--icon:hover {
   color: #adb5bd;
 }
+
+li:hover .client-sidebar--icon .sidebar-icon {
+  color: #e67700; /* Change to your desired color for the icon */
+}
+
+.client-logout {
+  color: red;
+}
