@@ -4,13 +4,13 @@ import loginPic from "../../assets/loginPic.png";
 import { baseurl } from "../../utils";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ClientContext } from "../../context/User";
+import { UserContext } from "../../context/User";
 
 function LoginForm() {
   // const [error, setError] = useState([]);
   const { register, handleSubmit } = useForm();
 
-  const { setClient } = useContext(ClientContext);
+  const { setUser } = useContext(UserContext);
 
   const navigate = useNavigate();
 
@@ -38,11 +38,11 @@ function LoginForm() {
         const user = data.user;
         localStorage.setItem("jwt", data.jwt);
         if (user.role === "admin") {
-          setClient(user);
+          setUser(user);
           console.log(user.role);
           navigate("/adminDash");
         } else {
-          setClient(user);
+          setUser(user);
           console.log(user.role);
           navigate("/dashboard");
         }

@@ -1,44 +1,44 @@
 import { createContext, useEffect, useState } from "react";
 import { baseurl } from "../utils";
 
-const ClientContext = createContext();
+const UserContext = createContext();
 
 // eslint-disable-next-line react/prop-types
-function ClientProvider({ children }) {
-  const [client, setClient] = useState(null);
+function UserProvider({ children }) {
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  console.log(client);
+  console.log(user);
 
   const token = localStorage.getItem("jwt");
 
   useEffect(() => {
-    fetchClient();
-  }, []); // Empty dependency array for a one-time effect
-
-  async function fetchClient() {
-    try {
-      const resp = await fetch(`${baseurl}/currentUser`, {
-        method: "GET",
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-          Authorization: `Bearer ${token}`, // Added Authorization header
-        },
-      });
-      const clientData = await resp.json();
-      setClient(clientData);
-    } catch (error) {
-      console.error("Error fetching client data:", error);
-    } finally {
-      setLoading(false);
+    async function fetchUser() {
+      try {
+        const resp = await fetch(`${baseurl}/currentUser`, {
+          method: "GET",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            Authorization: `Bearer ${token}`, // Added Authorization header
+          },
+        });
+        const userData = await resp.json();
+        setUser(userData);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      } finally {
+        setLoading(false);
+      }
     }
-  }
+
+    fetchUser();
+  }, [token]);
 
   return (
-    <ClientContext.Provider value={{ client, setClient, loading }}>
+    <UserContext.Provider value={{ user, setUser, loading }}>
       {children}
-    </ClientContext.Provider>
+    </UserContext.Provider>
   );
 }
 
-export { ClientContext, ClientProvider };
+export { UserContext, UserProvider };

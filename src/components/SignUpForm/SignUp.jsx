@@ -6,12 +6,11 @@ function SignUp() {
   const { register, handleSubmit } = useForm();
 
   function onSubmit(data) {
-    const client = {
+    const user = {
       username: data.username,
       first_name: data.First_name,
       last_name: data.last_name,
       password: data.password,
-      role: "client",
     };
 
     fetch(`${baseurl}/users`, {
@@ -21,7 +20,7 @@ function SignUp() {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(client),
+      body: JSON.stringify(user),
     })
       .then((r) => r.json())
       .then((data) => {

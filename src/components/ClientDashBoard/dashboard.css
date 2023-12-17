@@ -1,3 +1,34 @@
 .client-dashboard {
-  font-size: 3rem;
+  font-size: 1.8rem;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: 100vh;
+}
+
+.client-sidebar {
+  background-color: #14213d;
+}
+
+.client-sidebar li {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.client-sidebar li a,
+.client-sidebar li a:link,
+.client-sidebar li a:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  color: #f1f3f5;
+
+  transition: all 0.3s;
+}
+
+.client-sidebar li:hover {
+  background-color: #343a40;
 }

@@ -1,24 +1,48 @@
 import "./dashboard.css";
 import { useContext } from "react";
-import { ClientContext } from "../../context/User";
+import { UserContext } from "../../context/User";
 import { useNavigate } from "react-router-dom";
 
 function ClientDashBoard() {
-  const { client, setClient } = useContext(ClientContext);
+  const { user, setUser } = useContext(UserContext);
 
   const navigate = useNavigate();
-  console.log(client);
+  console.log(user);
 
   function handleLogout() {
     localStorage.removeItem("jwt");
-    setClient(null);
+    setUser(null);
     navigate("/login");
   }
 
   return (
     <div className="client-dashboard">
-      Welcome {client?.username}
-      <button onClick={handleLogout}>Logout</button>
+      <div className="dashboard-container">
+        <div className="client-sidebar">
+          <ul>
+            <li>
+              <a href="#">Dashboard</a>
+            </li>
+            <li>
+              <a href="#">Spaces</a>
+            </li>
+            <li>
+              <a href="#">WishList</a>
+            </li>
+            <li>
+              <a href="#">Visited</a>
+            </li>
+            <li>
+              <a href="#">settings</a>
+            </li>
+            <li>
+              {/* <a href="#">Dasbhoard</a> */}
+              <a onClick={handleLogout}>Logout</a>
+            </li>
+          </ul>
+        </div>
+        <div className="client-mainbar">Welcome {user?.username}</div>
+      </div>
     </div>
   );
 }
