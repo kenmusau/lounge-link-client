@@ -1,4 +1,5 @@
-import "./Home.css";
+import "../../pages/Home.css";
+
 
 // Popular Hotels
 

@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../components/LandingPage/Home";
-import LoginForm from "../components/LoginForm/LoginForm";
-import ClientDashBoard from "../components/ClientDashBoard/ClientDashBoard";
-import SignUp from "../components/SignUpForm/SignUp";
-import AdminDash from "../components/AdminDashboard/AdminDash";
+import Home from "../pages/Home";
+import LoginForm from "../pages/LoginForm/LoginForm";
+import ClientDashBoard from "../pages/ClientDashBoard/ClientDashBoard";
+import SignUp from "../pages/SignUpForm/SignUp";
+import AdminDash from "../pages/AdminDashboard/AdminDash";
 
 function MainRoutes() {
   return (

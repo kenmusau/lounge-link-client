@@ -1,4 +1,4 @@
-import "./Home.css";
+import "../../pages/Home.css";
 
 // Partner log
 import choice from "../../assets/patners/choice.png";

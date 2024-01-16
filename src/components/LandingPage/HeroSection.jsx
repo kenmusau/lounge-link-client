@@ -1,4 +1,5 @@
-import "./Home.css";
+import "../../pages/Home.css";
+
 
 // Partner log
 import heroImage from "../../assets/hero3.jpg";

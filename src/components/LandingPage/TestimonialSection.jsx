@@ -1,4 +1,5 @@
-import "./Home.css";
+import "../../pages/Home.css";
+
 import avatar1 from "../../assets/avatar/avatar1.jpg";
 import avatar2 from "../../assets/avatar/avatar2.jpg";
 import avatar3 from "../../assets/avatar/avatar3.jpg";

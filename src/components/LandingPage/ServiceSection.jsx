@@ -1,5 +1,4 @@
-import "./Home.css";
-import "./Home.css";
+import "../../pages/Home.css";
 
 import { Ri24HoursFill } from "react-icons/ri";
 import { RiCustomerService2Fill } from "react-icons/ri";
