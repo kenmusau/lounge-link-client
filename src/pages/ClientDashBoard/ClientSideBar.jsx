@@ -32,31 +32,31 @@ function ClientSideBar() {
         </li>
         <li>
           <div className={styles["client-sidebar--icon"]}>
-            <BsFillHouseAddFill className="sidebar-icon" />
+            <BsFillHouseAddFill className={styles["sidebar-icon"]} />
             <NavLink to="#">Spaces</NavLink>
           </div>
         </li>
         <li>
-          <div className="client-sidebar--icon">
-            <BsBookmarkStarFill className="sidebar-icon" />
+          <div className={styles["client-sidebar--icon"]}>
+            <BsBookmarkStarFill className={styles["sidebar-icon"]} />
             <NavLink to="#">WishList</NavLink>
           </div>
         </li>
         <li>
-          <div className="client-sidebar--icon">
-            <FaHistory className="sidebar-icon" />
+          <div className={styles["client-sidebar--icon"]}>
+            <FaHistory className={styles["sidebar-icon"]} />
             <NavLink to="#">Visited</NavLink>
           </div>
         </li>
         <li>
-          <div className="client-sidebar--icon">
-            <MdManageAccounts className="sidebar-icon" />
+          <div className={styles["client-sidebar--icon"]}>
+            <MdManageAccounts className={styles["sidebar-icon"]} />
             <NavLink to="#">settings</NavLink>
           </div>
         </li>
         <li>
           {/* <a href="#">Dasbhoard</a> */}
-          <div className="client-sidebar--icon">
+          <div className={styles["client-sidebar--icon"]}>
             <RiLogoutBoxFill className="client-logout" />
             <NavLink onClick={handleLogout}>Logout</NavLink>
           </div>

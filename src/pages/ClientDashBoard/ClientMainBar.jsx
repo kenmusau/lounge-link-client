@@ -1,4 +1,3 @@
-import "./dashboard.css";
 import { useUser } from "../../context/User";
 
 function ClientMainBar() {

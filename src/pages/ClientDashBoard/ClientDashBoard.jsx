@@ -1,12 +1,12 @@
-import "./dashboard.css";
+import styles from "./ClientDashBoard.module.css";
 
 import ClientSideBar from "./ClientSideBar";
 import ClientMainBar from "./ClientMainBar";
 
 function ClientDashBoard() {
   return (
-    <div className="client-dashboard">
-      <div className="dashboard-container">
+    <div className={styles["client-dashboard"]}>
+      <div className={styles["dashboard-container"]}>
         <ClientSideBar />
         <ClientMainBar />
       </div>
