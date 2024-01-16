@@ -2,15 +2,15 @@ import "./LoginForm.css";
 import { useForm } from "react-hook-form";
 import loginPic from "../../assets/loginPic.png";
 import { baseurl } from "../../utils";
-import { useContext } from "react";
+
 import { Link, useNavigate } from "react-router-dom";
-import { UserContext } from "../../context/User";
+import { useUser } from "../../context/User";
 
 function LoginForm() {
   // const [error, setError] = useState([]);
   const { register, handleSubmit } = useForm();
 
-  const { setUser } = useContext(UserContext);
+  const { setUser } = useUser();
 
   const navigate = useNavigate();
 
