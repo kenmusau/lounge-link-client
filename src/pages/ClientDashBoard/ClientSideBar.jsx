@@ -33,13 +33,13 @@ function ClientSideBar() {
         <li>
           <div className={styles["client-sidebar--icon"]}>
             <BsFillHouseAddFill className={styles["sidebar-icon"]} />
-            <NavLink to="#">Spaces</NavLink>
+            <NavLink to="spaces">Spaces</NavLink>
           </div>
         </li>
         <li>
           <div className={styles["client-sidebar--icon"]}>
             <BsBookmarkStarFill className={styles["sidebar-icon"]} />
-            <NavLink to="#">WishList</NavLink>
+            <NavLink to="wishlist">WishList</NavLink>
           </div>
         </li>
         <li>

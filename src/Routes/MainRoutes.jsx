@@ -8,6 +8,7 @@ import PageNotFound from "../pages/PageNotFound";
 import AppLayout from "../pages/ClientDashBoard/AppLayout";
 import Dashboard from "../components/Client/Dashboard";
 import Spaces from "../components/Client/Spaces";
+import WishList from "../components/Client/WishList";
 
 function MainRoutes() {
   return (
@@ -18,6 +19,7 @@ function MainRoutes() {
         <Route path="app" element={<AppLayout />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="spaces" element={<Spaces />} />
+          <Route path="wishlist" element={<WishList />} />
         </Route>
         <Route path="signup" element={<SignUp />} />
         <Route path="adminDash" element={<AdminDash />} />
