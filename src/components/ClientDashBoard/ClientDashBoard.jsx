@@ -1,6 +1,5 @@
 import "./dashboard.css";
-import { useContext } from "react";
-import { UserContext } from "../../context/User";
+import { useUser } from "../../context/User";
 import { useNavigate } from "react-router-dom";
 
 // icons
@@ -12,7 +11,7 @@ import { MdManageAccounts } from "react-icons/md";
 import { RiLogoutBoxFill } from "react-icons/ri";
 
 function ClientDashBoard() {
-  const { user, setUser } = useContext(UserContext);
+  const { user, setUser } = useUser();
 
   const navigate = useNavigate();
   console.log(user);
