@@ -27,7 +27,7 @@ function ClientSideBar() {
         <li>
           <div className={styles["client-sidebar--icon"]}>
             <MdDashboardCustomize className={styles["sidebar-icon"]} />
-            <NavLink to="#">Dashboard</NavLink>
+            <NavLink to="dashboard">Dashboard</NavLink>
           </div>
         </li>
         <li>

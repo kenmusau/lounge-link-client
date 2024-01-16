@@ -44,7 +44,7 @@ function LoginForm() {
         } else {
           setUser(user);
           console.log(user.role);
-          navigate("/dashboard");
+          navigate("/app");
         }
       } else {
         // setError(data?.error);
