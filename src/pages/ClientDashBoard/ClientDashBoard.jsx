@@ -1,16 +1,14 @@
 import "./dashboard.css";
-import { useUser } from "../../context/User";
 
 import ClientSideBar from "./ClientSideBar";
+import ClientMainBar from "./ClientMainBar";
 
 function ClientDashBoard() {
-  const { user } = useUser();
-
   return (
     <div className="client-dashboard">
       <div className="dashboard-container">
         <ClientSideBar />
-        <div className="client-mainbar">Welcome {user?.username}</div>
+        <ClientMainBar />
       </div>
     </div>
   );
