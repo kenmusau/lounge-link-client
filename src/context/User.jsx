@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { baseurl } from "../utils";
 
 const UserContext = createContext();
@@ -41,4 +41,11 @@ function UserProvider({ children }) {
   );
 }
 
-export { UserContext, UserProvider };
+function useUser() {
+  const context = useContext(UserContext);
+  if (context === undefined)
+    throw new Error("UserContext has been used outside User Provider");
+  return context;
+}
+
+export { UserProvider, useUser };
