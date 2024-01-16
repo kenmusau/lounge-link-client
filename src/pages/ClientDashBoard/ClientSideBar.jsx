@@ -45,13 +45,13 @@ function ClientSideBar() {
         <li>
           <div className={styles["client-sidebar--icon"]}>
             <FaHistory className={styles["sidebar-icon"]} />
-            <NavLink to="#">Visited</NavLink>
+            <NavLink to="visited">Visited</NavLink>
           </div>
         </li>
         <li>
           <div className={styles["client-sidebar--icon"]}>
             <MdManageAccounts className={styles["sidebar-icon"]} />
-            <NavLink to="#">settings</NavLink>
+            <NavLink to="settings">settings</NavLink>
           </div>
         </li>
         <li>
