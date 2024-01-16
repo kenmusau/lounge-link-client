@@ -1,9 +1,9 @@
-import styles from "./ClientDashBoard.module.css";
+import styles from "./AppLayout.module.css";
 
 import ClientSideBar from "./ClientSideBar";
 import ClientMainBar from "./ClientMainBar";
 
-function ClientDashBoard() {
+function AppLayout() {
   return (
     <div className={styles["client-dashboard"]}>
       <div className={styles["dashboard-container"]}>
@@ -14,4 +14,4 @@ function ClientDashBoard() {
   );
 }
 
-export default ClientDashBoard;
+export default AppLayout;

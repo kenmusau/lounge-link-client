@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import "../../pages/Home.css";
-
+import "../pages/Home.css";
 
 function Header() {
   return (

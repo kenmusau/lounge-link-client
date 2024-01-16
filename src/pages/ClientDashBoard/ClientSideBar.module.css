@@ -56,3 +56,8 @@ li:hover .client-sidebar--icon .sidebar-icon {
 .client-logout {
   color: red;
 }
+
+/* CSS Modules feature */
+/* .client-sidebar a:global(.active) {
+  background-color: orange;
+} */

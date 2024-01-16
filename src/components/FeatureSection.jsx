@@ -1,11 +1,11 @@
-import "../../pages/Home.css";
+import "../pages/Home.css";
 
 // Partner log
-import choice from "../../assets/patners/choice.png";
-import wynn from "../../assets/patners/wynn.png";
-import swiss from "../../assets/patners/swiss.png";
-import lowes from "../../assets/patners/lowes.png";
-import sofitel from "../../assets/patners/sofitel.png";
+import choice from "../assets/patners/choice.png";
+import wynn from "../assets/patners/wynn.png";
+import swiss from "../assets/patners/swiss.png";
+import lowes from "../assets/patners/lowes.png";
+import sofitel from "../assets/patners/sofitel.png";
 
 function FeatureSection() {
   return (
