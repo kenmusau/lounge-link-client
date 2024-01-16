@@ -1,13 +1,3 @@
-.client-dashboard {
-  font-size: 1.8rem;
-}
-
-.dashboard-container {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  height: 100vh;
-}
-
 .client-sidebar {
   background-color: #14213d;
   padding: 7rem 0;

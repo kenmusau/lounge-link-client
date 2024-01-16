@@ -1,4 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+
+import styles from "./ClientSideBar.module.css";
 
 // icons
 import { MdDashboardCustomize } from "react-icons/md";
@@ -20,43 +22,43 @@ function ClientSideBar() {
     navigate("/login");
   }
   return (
-    <div className="client-sidebar">
+    <div className={styles["client-sidebar"]}>
       <ul>
         <li>
-          <div className="client-sidebar--icon">
-            <MdDashboardCustomize className="sidebar-icon" />
-            <a href="#">Dashboard</a>
+          <div className={styles["client-sidebar--icon"]}>
+            <MdDashboardCustomize className={styles["sidebar-icon"]} />
+            <NavLink to="#">Dashboard</NavLink>
           </div>
         </li>
         <li>
-          <div className="client-sidebar--icon">
+          <div className={styles["client-sidebar--icon"]}>
             <BsFillHouseAddFill className="sidebar-icon" />
-            <a href="#">Spaces</a>
+            <NavLink to="#">Spaces</NavLink>
           </div>
         </li>
         <li>
           <div className="client-sidebar--icon">
             <BsBookmarkStarFill className="sidebar-icon" />
-            <a href="#">WishList</a>
+            <NavLink to="#">WishList</NavLink>
           </div>
         </li>
         <li>
           <div className="client-sidebar--icon">
             <FaHistory className="sidebar-icon" />
-            <a href="#">Visited</a>
+            <NavLink to="#">Visited</NavLink>
           </div>
         </li>
         <li>
           <div className="client-sidebar--icon">
             <MdManageAccounts className="sidebar-icon" />
-            <a href="#">settings</a>
+            <NavLink to="#">settings</NavLink>
           </div>
         </li>
         <li>
           {/* <a href="#">Dasbhoard</a> */}
           <div className="client-sidebar--icon">
             <RiLogoutBoxFill className="client-logout" />
-            <a onClick={handleLogout}>Logout</a>
+            <NavLink onClick={handleLogout}>Logout</NavLink>
           </div>
         </li>
       </ul>
