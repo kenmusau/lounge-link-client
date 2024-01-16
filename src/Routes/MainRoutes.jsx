@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "../pages/Home";
 import LoginForm from "../pages/LoginForm/LoginForm";
 
@@ -19,6 +19,7 @@ function MainRoutes() {
         <Route index element={<Home />} />
         <Route path="login" element={<LoginForm />} />
         <Route path="app" element={<AppLayout />}>
+          <Route index element={<Navigate replace to="dashboard" />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="spaces" element={<Spaces />} />
           <Route path="wishlist" element={<WishList />} />
