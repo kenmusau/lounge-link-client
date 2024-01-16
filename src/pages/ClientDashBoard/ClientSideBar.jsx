@@ -58,7 +58,7 @@ function ClientSideBar() {
           {/* <a href="#">Dasbhoard</a> */}
           <div className={styles["client-sidebar--icon"]}>
             <RiLogoutBoxFill className="client-logout" />
-            <NavLink onClick={handleLogout}>Logout</NavLink>
+            <a onClick={handleLogout}>Logout</a>
           </div>
         </li>
       </ul>

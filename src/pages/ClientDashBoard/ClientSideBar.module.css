@@ -59,6 +59,6 @@ li:hover .client-sidebar--icon .sidebar-icon {
 
 /* CSS Modules feature */
 
-/* .client-sidebar a:global(.active) {
-  background-color: orange;
-} */
+.client-sidebar li:global(.active) {
+  background-color: #49505742;
+}
