@@ -1,10 +1,10 @@
-import { useContext } from "react";
 import "./adminDash.css";
-import { UserContext } from "../../context/User";
+import { useUser } from "../../context/User";
 import { useNavigate } from "react-router-dom";
 
 function AdminDash() {
-  const { user, setUser } = useContext(UserContext);
+  const { user, setUser } = useUser();
+
   const navigate = useNavigate();
 
   function handleLogout() {
