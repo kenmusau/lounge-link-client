@@ -24,5 +24,23 @@
   justify-content: center;
 }
 
+.client-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.6rem;
+}
+
+.client-info p {
+  font-size: 1.6rem;
+}
+
 .btn {
+  padding: 0.9rem 1.6rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f59f00;
+  color: #fff;
+
+  align-self: center;
 }
