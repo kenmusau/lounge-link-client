@@ -24,7 +24,9 @@ function Dashboard() {
           <p>
             {user.first_name} {user.last_name}
           </p>
-          <p className={!user.email ? styles.lighter : styles.darker}>
+          <p
+            className={!user.email ? styles["lighter-textStyl"] : styles.darker}
+          >
             {user.email ? user.email : "Update your email Below"}
           </p>
           <button className={styles.btn}>Update Profile</button>
