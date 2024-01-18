@@ -23,6 +23,7 @@ function Dashboard() {
         <div className={styles["client-info"]}>
           <p>Kennedy Musau</p>
           <p>Kenndy.musau@gmail.com</p>
+          <button className="btn">Update Profile</button>
         </div>
       </div>
     </div>

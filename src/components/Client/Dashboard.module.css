@@ -1,6 +1,11 @@
 .dashboard-container {
-  display: flex;
-  gap: 5.8rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* gap: 5.8rem; */
+}
+
+.client-intro-section {
+  width: 90%;
 }
 
 .client-intro {
@@ -17,4 +22,7 @@
 
   align-items: center;
   justify-content: center;
+}
+
+.btn {
 }
