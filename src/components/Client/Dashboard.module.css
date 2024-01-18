@@ -18,7 +18,7 @@
 
 .client-profile {
   display: flex;
-  gap: 4.8rem;
+  gap: 3.2rem;
 
   align-items: center;
   justify-content: center;
@@ -43,4 +43,13 @@
   color: #fff;
 
   align-self: center;
+}
+
+.btn:hover {
+  background-color: #f08c00;
+}
+
+.lighter {
+  font-style: italic;
+  color: #ced4da;
 }

@@ -21,8 +21,12 @@ function Dashboard() {
           className={styles["client-avatar"]}
         />
         <div className={styles["client-info"]}>
-          <p>Kennedy Musau</p>
-          <p>Kenndy.musau@gmail.com</p>
+          <p>
+            {user.first_name} {user.last_name}
+          </p>
+          <p className={!user.email ? styles.lighter : styles.darker}>
+            {user.email ? user.email : "Update your email Below"}
+          </p>
           <button className={styles.btn}>Update Profile</button>
         </div>
       </div>
