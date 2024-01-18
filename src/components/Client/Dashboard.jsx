@@ -3,6 +3,7 @@ import { useUser } from "../../context/User";
 
 function Dashboard() {
   const { user } = useUser();
+  console.log(user);
   return (
     <div className={styles["dashboard-container"]}>
       <div className={styles["client-intro-section"]}>
@@ -19,6 +20,10 @@ function Dashboard() {
           alt="client profile"
           className={styles["client-avatar"]}
         />
+        <div className={styles["client-info"]}>
+          <p>Kennedy Musau</p>
+          <p>Kenndy.musau@gmail.com</p>
+        </div>
       </div>
     </div>
   );
