@@ -3,6 +3,7 @@ import { baseurl } from "../../utils";
 import SpaceCardItem from "./SpaceCardItem";
 
 import styles from "./SpaceCards.module.css";
+import { ClipLoader } from "react-spinners";
 
 const initialState = {
   spaces: [],
@@ -22,7 +23,7 @@ function reducer(state, action) {
 }
 
 function SpaceCards() {
-  const [{ spaces }, dispatch] = useReducer(reducer, initialState);
+  const [{ spaces, isLoading }, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
     async function fetchSpaces() {
@@ -39,6 +40,9 @@ function SpaceCards() {
 
     fetchSpaces();
   }, []);
+
+  if (isLoading) return <ClipLoader />;
+
   return (
     <div className={styles["cards-container"]}>
       <ul>
