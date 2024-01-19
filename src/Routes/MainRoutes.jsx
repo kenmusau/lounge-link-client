@@ -7,10 +7,10 @@ import AdminDash from "../pages/AdminDashboard/AdminDash";
 import PageNotFound from "../pages/PageNotFound";
 import AppLayout from "../pages/ClientDashBoard/AppLayout";
 import Dashboard from "../components/Client/Dashboard";
-import Spaces from "../components/Client/Spaces";
 import WishList from "../components/Client/WishList";
 import Visited from "../components/Client/Visited";
 import Settings from "../components/Client/Settings";
+import SpaceLayout from "../components/Client/SpacesLayout";
 
 function MainRoutes() {
   return (
@@ -21,7 +21,7 @@ function MainRoutes() {
         <Route path="app" element={<AppLayout />}>
           <Route index element={<Navigate replace to="dashboard" />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="spaces" element={<Spaces />} />
+          <Route path="spaces" element={<SpaceLayout />} />
           <Route path="wishlist" element={<WishList />} />
           <Route path="visited" element={<Visited />} />
           <Route path="settings" element={<Settings />} />
