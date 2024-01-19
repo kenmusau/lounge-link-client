@@ -2,6 +2,8 @@ import { useEffect, useReducer } from "react";
 import { baseurl } from "../../utils";
 import SpaceCardItem from "./SpaceCardItem";
 
+import styles from "./SpaceCards.module.css";
+
 const initialState = {
   spaces: [],
   isLoading: true,
