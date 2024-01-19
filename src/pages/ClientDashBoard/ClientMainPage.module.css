@@ -1,4 +1,5 @@
 .main-page-container {
+  overflow: auto;
   background-color: #f8f9fa;
 
   padding: 8.8rem 5.2rem 5.2rem 5.2rem;
