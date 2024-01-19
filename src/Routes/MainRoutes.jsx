@@ -10,7 +10,7 @@ import Dashboard from "../components/Client/Dashboard";
 import WishList from "../components/Client/WishList";
 import Visited from "../components/Client/Visited";
 import Settings from "../components/Client/Settings";
-import SpaceLayout from "../components/Client/SpacesLayout";
+import SpaceLayout from "../pages/Space/SpacesLayout";
 
 function MainRoutes() {
   return (
