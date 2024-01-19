@@ -41,7 +41,7 @@ function SpaceCards() {
     fetchSpaces();
   }, []);
 
-  if (isLoading) return <ClipLoader />;
+  if (isLoading) return <ClipLoader color="#f08c00" />;
 
   return (
     <div className={styles["cards-container"]}>
