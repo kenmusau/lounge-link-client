@@ -1,0 +1,6 @@
+.cards-container ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  outline: 2px solid red;
+}

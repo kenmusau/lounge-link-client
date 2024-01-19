@@ -40,7 +40,7 @@ function SpaceCards() {
     fetchSpaces();
   }, []);
   return (
-    <div>
+    <div className={styles["cards-container"]}>
       <ul>
         {spaces.map((space) => (
           <SpaceCardItem key={space.id} space={space} />
