@@ -12,9 +12,8 @@ import { RiLogoutBoxFill } from "react-icons/ri";
 import { useUser } from "../../context/User";
 
 function ClientSideBar() {
-  const { user, setUser } = useUser();
+  const { setUser } = useUser();
   const navigate = useNavigate();
-  console.log(user);
 
   function handleLogout() {
     localStorage.removeItem("jwt");

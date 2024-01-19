@@ -1,5 +1,6 @@
 import { useEffect, useReducer } from "react";
 import { baseurl } from "../../utils";
+import SpaceCardItem from "./SpaceCardItem";
 
 const initialState = {
   spaces: [],
@@ -21,7 +22,6 @@ function reducer(state, action) {
 function SpaceCards() {
   const [{ spaces }, dispatch] = useReducer(reducer, initialState);
 
-  console.log(spaces);
   useEffect(() => {
     async function fetchSpaces() {
       dispatch({ type: "isLoading" });
@@ -40,11 +40,8 @@ function SpaceCards() {
   return (
     <div>
       <ul>
-        {spaces.map((space, i) => (
-          <>
-            <li key={i}>{space.name}</li>
-            <img src={space.image} alt="" />
-          </>
+        {spaces.map((space) => (
+          <SpaceCardItem key={space.id} space={space} />
         ))}
       </ul>
     </div>
