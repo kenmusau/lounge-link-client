@@ -18,7 +18,7 @@ function reducer(state, action) {
   }
 }
 
-function Spaces() {
+function SpaceLayout() {
   const [{ spaces }, dispatch] = useReducer(reducer, initialState);
 
   console.log(spaces);
@@ -51,4 +51,4 @@ function Spaces() {
   );
 }
 
-export default Spaces;
+export default SpaceLayout;
