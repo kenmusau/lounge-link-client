@@ -41,7 +41,12 @@ function SpaceCards() {
     fetchSpaces();
   }, []);
 
-  if (isLoading) return <ClipLoader color="#f08c00" />;
+  if (isLoading)
+    return (
+      <div className={styles.spinner}>
+        <ClipLoader color="#f08c00" />
+      </div>
+    );
 
   return (
     <div className={styles["cards-container"]}>
