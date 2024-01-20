@@ -5,9 +5,9 @@ function SpaceCardItem({ space }) {
   return (
     <div className={styles["spaceCard-container"]}>
       <li>
-        <p>{space.name}</p>
-
         <img className={styles["card-image"]} src={space.image} alt="" />
+        <p>{space.name}</p>
+        <p>{space.location}</p>
       </li>
     </div>
   );
