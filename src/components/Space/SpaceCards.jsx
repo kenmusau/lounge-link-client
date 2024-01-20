@@ -7,16 +7,16 @@ import { ClipLoader } from "react-spinners";
 
 const initialState = {
   spaces: [],
-  isLoading: true,
+  isLoading: false,
   error: "",
 };
 
 function reducer(state, action) {
   switch (action.type) {
+    case "loading":
+      return { ...state, isLoading: true };
     case "spaces/loaded":
       return { ...state, isLoading: false, spaces: action.payload };
-    case "isLoading":
-      return { ...state, isLoading: true };
     default:
       throw new Error("Unkown action");
   }
@@ -27,7 +27,7 @@ function SpaceCards() {
 
   useEffect(() => {
     async function fetchSpaces() {
-      dispatch({ type: "isLoading" });
+      dispatch({ type: "loading" });
       try {
         const res = await fetch(`${baseurl}/spaces`);
         const data = await res.json();
