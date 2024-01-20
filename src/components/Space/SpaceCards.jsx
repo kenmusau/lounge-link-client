@@ -16,7 +16,7 @@ function reducer(state, action) {
     case "spaces/loaded":
       return { ...state, isLoading: false, spaces: action.payload };
     case "isLoading":
-      return { ...state, isLoading: false };
+      return { ...state, isLoading: true };
     default:
       throw new Error("Unkown action");
   }
@@ -41,7 +41,7 @@ function SpaceCards() {
     fetchSpaces();
   }, []);
 
-  if (isLoading) return <ClipLoader />;
+  if (isLoading) return <ClipLoader color="#f08c00" />;
 
   return (
     <div className={styles["cards-container"]}>
