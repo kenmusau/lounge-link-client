@@ -26,7 +26,10 @@ function reducer(state, action) {
 }
 
 function SpaceProvider({ children }) {
-  const [{ spaces, isLoading }, dispatch] = useReducer(reducer, initialState);
+  const [{ spaces, isLoading, currentSpace }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
 
   useEffect(() => {
     async function fetchSpaces() {
@@ -49,6 +52,7 @@ function SpaceProvider({ children }) {
   }, []);
 
   async function getSpace(id) {
+    // if (Number(id) === currentSpace.id) return;
     dispatch({ type: "loading" });
     try {
       const res = await fetch(`${baseurl}/spaces/${id}`);
@@ -62,7 +66,9 @@ function SpaceProvider({ children }) {
     }
   }
   return (
-    <SpaceContext.Provider value={{ spaces, isLoading, getSpace }}>
+    <SpaceContext.Provider
+      value={{ spaces, currentSpace, isLoading, getSpace }}
+    >
       {children}
     </SpaceContext.Provider>
   );

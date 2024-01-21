@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./SpaceCardItem.module.css";
 
 function SpaceCardItem({ space }) {
-  console.log(space);
+  // console.log(space);
 
   return (
     <div className={styles["spaceCard-container"]}>
