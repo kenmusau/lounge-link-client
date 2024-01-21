@@ -4,11 +4,14 @@ function SpaceCardItem({ space }) {
   console.log(space);
   return (
     <div className={styles["spaceCard-container"]}>
-      <li>
+      <div className={styles.card}>
         <img className={styles["card-image"]} src={space.image} alt="" />
-        <p>{space.name}</p>
-        <p>{space.location}</p>
-      </li>
+        <div className={styles["card-content"]}>
+          <p>{space.name}</p>
+          <p>{space.location}</p>
+          <p>{space.price}</p>
+        </div>
+      </div>
     </div>
   );
 }
