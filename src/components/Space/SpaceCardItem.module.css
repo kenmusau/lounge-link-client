@@ -14,8 +14,8 @@
 }
 
 .card img {
-  height: 20rem;
   width: 100%;
+  height: 270px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   transition: transform 0.5s, filter 1.5s ease-in-out;
@@ -24,4 +24,18 @@
 
 .card img:hover {
   transform: scale(1.1);
+}
+
+.card-content {
+  padding: 2rem;
+}
+
+.card-content h3 {
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 1.6rem;
 }

@@ -1,5 +1,5 @@
 import "./adminDash.css";
-import { useUser } from "../../context/User";
+import { useUser } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 
 function AdminDash() {

@@ -9,7 +9,7 @@ import { BsBookmarkStarFill } from "react-icons/bs";
 import { FaHistory } from "react-icons/fa";
 import { MdManageAccounts } from "react-icons/md";
 import { RiLogoutBoxFill } from "react-icons/ri";
-import { useUser } from "../../context/User";
+import { useUser } from "../../context/UserContext";
 
 function ClientSideBar() {
   const { setUser } = useUser();

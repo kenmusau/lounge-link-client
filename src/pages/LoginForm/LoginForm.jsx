@@ -4,7 +4,7 @@ import loginPic from "../../assets/loginPic.png";
 import { baseurl } from "../../utils";
 
 import { Link, useNavigate } from "react-router-dom";
-import { useUser } from "../../context/User";
+import { useUser } from "../../context/UserContext";
 
 function LoginForm() {
   // const [error, setError] = useState([]);

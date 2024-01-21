@@ -11,6 +11,7 @@ import WishList from "../components/Client/WishList";
 import Visited from "../components/Client/Visited";
 import Settings from "../components/Client/Settings";
 import SpaceLayout from "../pages/Space/SpacesLayout";
+import Space from "../components/Space/Space";
 
 function MainRoutes() {
   return (
@@ -22,6 +23,7 @@ function MainRoutes() {
           <Route index element={<Navigate replace to="dashboard" />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="spaces" element={<SpaceLayout />} />
+          <Route path="spaces/:id" element={<Space />} />
           <Route path="wishlist" element={<WishList />} />
           <Route path="visited" element={<Visited />} />
           <Route path="settings" element={<Settings />} />

@@ -1,5 +1,5 @@
 import styles from "./Dashboard.module.css";
-import { useUser } from "../../context/User";
+import { useUser } from "../../context/UserContext";
 
 function Dashboard() {
   const { user } = useUser();
