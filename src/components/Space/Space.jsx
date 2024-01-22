@@ -20,7 +20,7 @@ function Space() {
 
   if (isLoading)
     return (
-      <div>
+      <div className={styles["space-loader"]}>
         <BounceLoader />
       </div>
     );
@@ -33,7 +33,9 @@ function Space() {
   return (
     <div className={styles["space-container"]}>
       <div className={styles.space}>
-        <button onClick={handleBackButton}>&larr; Back</button>
+        <button onClick={handleBackButton} className={styles.btn}>
+          &larr; Back
+        </button>
         <p>{name}</p>
         <p>{description}</p>
         <p>{location}</p>

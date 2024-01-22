@@ -4,6 +4,12 @@
   flex-wrap: wrap;
 }
 
+.card:link,
+.card:visited {
+  color: #343a40;
+  text-decoration: none;
+}
+
 .card {
   background-color: #fff;
   cursor: pointer;
