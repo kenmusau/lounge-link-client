@@ -1,7 +1,9 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useSpace } from "../../context/SpaceContext";
 import { useEffect } from "react";
-import { BounceLoader } from "react-spinners";
+import { ClipLoader } from "react-spinners";
+
+import { HiOutlineLocationMarker } from "react-icons/hi";
 
 import styles from "./Space.module.css";
 
@@ -21,7 +23,7 @@ function Space() {
   if (isLoading)
     return (
       <div className={styles["space-loader"]}>
-        <BounceLoader />
+        <ClipLoader color="#f08c00" />
       </div>
     );
 
@@ -36,12 +38,21 @@ function Space() {
         <button onClick={handleBackButton} className={styles.btn}>
           &larr; Back
         </button>
-        <p>{name}</p>
-        <p>{description}</p>
-        <p>{location}</p>
-        <p>{price}</p>
-        <p>{contact}</p>
-        <img src={image} alt={name} />
+
+        <div>
+          <img src={image} alt={name} />
+          <h3 className={styles["space-title"]}>{name}</h3>
+          <p className={styles.description}>
+            <span>Description: </span> {description}
+          </p>
+          <p className={styles["phone-number"]}>
+            <span>Phone Number:</span> {contact}
+          </p>
+          <div>
+            <p>{location}</p>
+            <p>{price}</p>
+          </div>
+        </div>
       </div>
     </div>
   );
