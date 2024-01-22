@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { ClipLoader } from "react-spinners";
 
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import { HiPhone } from "react-icons/hi";
+import { HiOutlineCash } from "react-icons/hi";
 
 import styles from "./Space.module.css";
 
@@ -42,15 +44,28 @@ function Space() {
         <div>
           <img src={image} alt={name} />
           <h3 className={styles["space-title"]}>{name}</h3>
+
           <p className={styles.description}>
             <span>Description: </span> {description}
           </p>
-          <p className={styles["phone-number"]}>
-            <span>Phone Number:</span> {contact}
-          </p>
+
           <div>
-            <p>{location}</p>
-            <p>{price}</p>
+            <HiPhone />
+            <p className={styles["phone-number"]}>
+              <span>Phone Number:</span> {contact}
+            </p>
+          </div>
+
+          <div>
+            <div className={styles["icon"]}>
+              <HiOutlineLocationMarker />
+              <p>{location}</p>
+            </div>
+
+            <div>
+              <HiOutlineCash />
+              <p>{price}</p>
+            </div>
           </div>
         </div>
       </div>
