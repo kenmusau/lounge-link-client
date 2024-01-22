@@ -63,8 +63,11 @@ function Space() {
               <p>{price}</p>
             </div>
           </div>
-          <button>Available</button>
-          <button>Book Now</button>
+
+          <div className={styles["act-btns"]}>
+            <button className={styles["btn"]}>Available</button>
+            <button className={styles["btn"]}>Book Now</button>
+          </div>
         </div>
       </div>
     </div>

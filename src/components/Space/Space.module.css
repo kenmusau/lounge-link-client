@@ -41,6 +41,13 @@
   gap: 1rem;
 }
 
+.act-btns {
+  display: flex;
+  gap: 10rem;
+
+  margin-top: 4rem;
+}
+
 .btn {
   color: inherit;
   text-transform: uppercase;
@@ -50,6 +57,5 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-
   margin-bottom: 3rem;
 }
