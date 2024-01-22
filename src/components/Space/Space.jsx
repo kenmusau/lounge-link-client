@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import { ClipLoader } from "react-spinners";
 
 import { HiOutlineLocationMarker } from "react-icons/hi";
-import { HiPhone } from "react-icons/hi";
 import { HiOutlineCash } from "react-icons/hi";
 
 import styles from "./Space.module.css";
@@ -49,24 +48,23 @@ function Space() {
             <span>Description: </span> {description}
           </p>
 
-          <div>
-            <HiPhone />
-            <p className={styles["phone-number"]}>
-              <span>Phone Number:</span> {contact}
-            </p>
-          </div>
+          <p className={styles["phone-number"]}>
+            <span>Phone Number:</span> {contact}
+          </p>
 
-          <div>
-            <div className={styles["icon"]}>
+          <div className={styles["location-price"]}>
+            <div className={styles["icons"]}>
               <HiOutlineLocationMarker />
               <p>{location}</p>
             </div>
 
-            <div>
+            <div className={styles["icons"]}>
               <HiOutlineCash />
               <p>{price}</p>
             </div>
           </div>
+          <button>Available</button>
+          <button>Book Now</button>
         </div>
       </div>
     </div>

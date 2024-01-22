@@ -29,6 +29,18 @@
   margin-bottom: 1.5rem;
 }
 
+.location-price {
+  display: flex;
+  gap: 10rem;
+}
+
+.icons {
+  display: flex;
+
+  align-items: center;
+  gap: 1rem;
+}
+
 .btn {
   color: inherit;
   text-transform: uppercase;
