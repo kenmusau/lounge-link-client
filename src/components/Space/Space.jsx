@@ -36,7 +36,10 @@ function Space() {
   return (
     <div className={styles["space-container"]}>
       <div className={styles.space}>
-        <button onClick={handleBackButton} className={styles.btn}>
+        <button
+          onClick={handleBackButton}
+          className={`${styles.btn} ${styles["back--btn"]}`}
+        >
           &larr; Back
         </button>
 

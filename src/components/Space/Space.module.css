@@ -59,3 +59,12 @@
   cursor: pointer;
   margin-bottom: 3rem;
 }
+
+.back--btn {
+  background-color: #fa5252;
+  color: #fff;
+}
+
+.back--btn:hover {
+  background-color: #e03131;
+}
