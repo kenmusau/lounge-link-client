@@ -1,5 +1,7 @@
 .space-container {
   height: 100vh;
+
+  display: flex;
 }
 
 .space-loader {

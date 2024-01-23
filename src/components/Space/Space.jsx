@@ -73,6 +73,20 @@ function Space() {
           </div>
         </div>
       </div>
+
+      <div>
+        <h2>Features</h2>
+        <ul>
+          <li>– Fine dining restaurants </li>
+          <li>– Casual dining options</li>
+          <li>– Buffet or breakfast areas</li>
+          <li>– Rooftop bars and lounges</li>
+          <li>– Childcare or babysitting services</li>
+          <li>– Kids’ clubs and play areas</li>
+          <li>– Family-friendly room options</li>
+          <li>– Teen activity programs</li>
+        </ul>
+      </div>
     </div>
   );
 }
