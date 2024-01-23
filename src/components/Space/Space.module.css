@@ -1,7 +1,5 @@
 .space-container {
   height: 100vh;
-
-  display: flex;
 }
 
 .space-loader {
@@ -10,6 +8,10 @@
   align-items: center;
   height: 100vh;
 }
+
+/* .space {
+  display: flex;
+} */
 
 .space img {
   width: 40%;
