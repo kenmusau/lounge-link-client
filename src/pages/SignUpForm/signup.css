@@ -1,5 +1,5 @@
 .client-signup-container {
-  background-color: #f5c999;
+  background-color: #ffe8cc;
   height: 100vh;
   font-size: 3rem;
   display: grid;
@@ -13,6 +13,7 @@
   flex-direction: column;
 
   gap: 2rem;
+  background-color: #fff;
 }
 .client-signup label {
   display: block;
