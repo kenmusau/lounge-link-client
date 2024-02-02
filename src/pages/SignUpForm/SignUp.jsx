@@ -33,11 +33,12 @@ function SignUp() {
   return (
     <div className="client-signup-container">
       <form onSubmit={handleSubmit(onSubmit)} className="client-signup">
-        <label htmlFor="username">username</label>
+        <label htmlFor="username">UserName</label>
         <input
           type="text"
           name="username"
           id="username"
+          placeholder="Your username"
           {...register("username")}
         />
 
@@ -46,22 +47,25 @@ function SignUp() {
           type="text"
           name="First_name"
           id="First_name"
+          placeholder="Your First Name"
           {...register("First_name")}
         />
 
-        <label htmlFor="last_name">last name</label>
+        <label htmlFor="last_name">Last Name</label>
         <input
           type="text"
           name="last_name"
           id="last_name"
+          placeholder="Your Last Name"
           {...register("last_name")}
         />
 
-        <label htmlFor="password">password</label>
+        <label htmlFor="password">Password</label>
         <input
           type="password"
           name="password"
           id="password"
+          placeholder="*********"
           {...register("password")}
         />
 

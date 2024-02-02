@@ -1,5 +1,5 @@
 .client-signup-container {
-  background-color: #ffe8cc;
+  background-color: #fff4e6;
   height: 100vh;
   font-size: 3rem;
   display: grid;
@@ -12,19 +12,32 @@
   display: flex;
   flex-direction: column;
 
-  gap: 2rem;
+  gap: 1.5rem;
   background-color: #fff;
+  padding: 5rem;
+  border-radius: 7px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .client-signup label {
   display: block;
+
+  color: #495057;
+  font-size: 1.9rem;
 }
 
 .client-signup input {
-  font-size: 2rem;
+  font-size: 1.5rem;
   height: 4rem;
   width: 40rem;
-  border-radius: 11px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /* border-radius: 9px; */
+  border: 0 solid grey;
   padding: 1rem;
+  background-color: #f8f9fa;
+}
+.client-signup input:focus {
+  border: 0px;
 }
 
 .client-signup-container button {
