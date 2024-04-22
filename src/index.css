@@ -23,3 +23,9 @@ body::-webkit-scrollbar-thumb {
   background-color: #e67700;
   outline: 1px solid slategrey;
 }
+
+@media (max-width: 78em) {
+  html {
+    font-size: 56.25%;
+  }
+}

@@ -99,6 +99,7 @@
 
 .section-hero {
   background-color: #f8f9fa;
+  margin: 0 2rem;
 }
 
 .hero {
@@ -421,3 +422,43 @@
 
 -SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+@media (max-width: 69em) {
+  .heading-primary {
+    font-size: 4rem;
+  }
+  .hero-description {
+    font-size: 2rem;
+  }
+  .hero-image-box img {
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 63em) {
+  .heading-primary {
+    font-size: 3.5rem;
+  }
+  .hero-description {
+    font-size: 1.8rem;
+  }
+  .hero-image-box img {
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 57em) {
+  .home-nav {
+    display: none;
+  }
+  .hero {
+    grid-template-columns: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .stats {
+    text-align: center;
+    width: 100%;
+  }
+}
