@@ -461,4 +461,26 @@
     text-align: center;
     width: 100%;
   }
+  .logos {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .popular-hotels,
+  .services-cards,
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-cards {
+    grid-template-columns: auto;
+  }
+}
+@media (max-width: 43em) {
+  .logos,
+  .popular-hotels,
+  .services-cards {
+    grid-template-columns: auto;
+  }
 }

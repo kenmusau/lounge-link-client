@@ -13,11 +13,11 @@ function FeatureSection() {
       <div className="container">
         <h2 className="heading-secondary feature-heading">Our Partners</h2>
         <div className="logos">
-          <img className="feature-img" src={choice} alt="" />
-          <img className="feature-img" src={wynn} alt="" />
-          <img className="feature-img" src={sofitel} alt="" />
-          <img className="feature-img" src={lowes} alt="" />
-          <img className="feature-img" src={swiss} alt="" />
+          <img className="feature-img logo-1" src={choice} alt="" />
+          <img className="feature-img logo-2" src={wynn} alt="" />
+          <img className="feature-img logo-3" src={sofitel} alt="" />
+          <img className="feature-img logo-4" src={lowes} alt="" />
+          <img className="feature-img logo-5" src={swiss} alt="" />
         </div>
       </div>
     </section>
