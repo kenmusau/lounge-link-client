@@ -478,6 +478,25 @@
   }
 }
 @media (max-width: 43em) {
+  .stats .number {
+    font-size: 3rem;
+  }
+  .home-section-header {
+    margin-bottom: 3em;
+  }
+  .heading-primary {
+    font-size: 3rem;
+  }
+  .hero-description {
+    font-size: 1.6rem;
+  }
+  .section-testimonials,
+  .section-popular .section-services {
+    padding: 5rem;
+  }
+  .container {
+    padding: 0 1rem;
+  }
   .logos,
   .popular-hotels,
   .services-cards {
