@@ -2,6 +2,7 @@ import "../pages/Home.css";
 
 // Partner log
 import heroImage from "../assets/hero3.jpg";
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -16,9 +17,9 @@ function HeroSection() {
             Unlock the Ultimate Relaxation Experience and discover Comfortable
             Lounges, Where You Can Unwind, Connect, and Make Every Moment Count.
           </p>
-          <a href="#" className="btn hero-btn--cta">
+          <Link to="/login" className="btn hero-btn--cta">
             <span>Book Now</span> &rarr;
-          </a>
+          </Link>
 
           <div className="stats">
             <p className="number">120+</p>

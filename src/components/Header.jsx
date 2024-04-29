@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import "../pages/Home.css";
+import Links from "./Space/Links";
 
 function Header() {
   return (
@@ -8,44 +8,7 @@ function Header() {
         Lou<span>nge</span>
       </a>
       <nav className="home-nav">
-        <ul className="home-nav-list">
-          <li>
-            <a className="home-nav-link" href="#">
-              Home
-            </a>
-          </li>
-          <li>
-            <a className="home-nav-link" href="#">
-              About us
-            </a>
-          </li>
-          <li>
-            <a className="home-nav-link" href="#">
-              services
-            </a>
-          </li>
-
-          <li>
-            <a className="home-nav-link" href="#">
-              contact
-            </a>
-          </li>
-          {/* <li>
-              <a className="home-nav-link home-nav--admin" href="#">
-                Admin
-              </a>
-            </li> */}
-          <li>
-            <Link to="login" className="home-nav-link home-nav--login" href="#">
-              Log In
-            </Link>
-          </li>
-          <li>
-            <a className="home-nav-link home-nav--cta" href="#">
-              Sign Up
-            </a>
-          </li>
-        </ul>
+        <Links />
       </nav>
     </header>
   );
