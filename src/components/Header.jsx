@@ -1,5 +1,6 @@
 import "../pages/Home.css";
 import Links from "./Space/Links";
+import SideBar from "./Space/SideBar";
 
 function Header() {
   return (
@@ -10,6 +11,9 @@ function Header() {
       <nav className="home-nav">
         <Links />
       </nav>
+      <div className="sidebar">
+        <SideBar />
+      </div>
     </header>
   );
 }

@@ -35,6 +35,10 @@
   background-color: #f8f9fa;
 }
 
+.home-section-header .sidebar {
+  display: none;
+}
+
 .home-logo:link,
 .home-logo:visited {
   display: inline-block;
@@ -450,6 +454,9 @@
 @media (max-width: 57em) {
   .home-nav {
     display: none;
+  }
+  .home-section-header .sidebar {
+    display: block;
   }
   .hero {
     grid-template-columns: auto;
