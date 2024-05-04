@@ -12,6 +12,10 @@ function SideBar() {
     "Log In",
     "Sign Up",
   ];
+
+  const closeSidebar = () => {
+    setOpen(false);
+  };
   return (
     <div className="sidebar-section ">
       <NavToogleBtn open={open} setOpen={setOpen} />
@@ -19,7 +23,7 @@ function SideBar() {
         className={`sidebar-menu ${open ? "sidebar-open" : "sidebar-close"}`}
       >
         {links.map((link) => (
-          <a href="#" className="links" key={link}>
+          <a href="#" className="links" key={link} onClick={closeSidebar}>
             {link}
           </a>
         ))}
