@@ -461,12 +461,16 @@
     position: fixed;
     background-color: #f8f9fa;
     width: 100%;
+    box-shadow: 0 0 2px grey;
   }
   .home-nav {
     display: none;
   }
   .home-section-header .sidebar {
     display: flex;
+  }
+  .section-hero {
+    padding-top: 15em;
   }
 
   .hero {
