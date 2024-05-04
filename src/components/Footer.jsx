@@ -46,7 +46,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="footer-about-us">
+        <div className="footer-contact">
           <h2>Resources</h2>
           <ul>
             <li>
@@ -67,7 +67,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="footer-about-us">
+        <div className="footer-misc">
           <h2>Contact Us</h2>
           <ul>
             <li>

@@ -524,4 +524,12 @@
   .services-cards {
     grid-template-columns: auto;
   }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-misc,
+  .footer-contact {
+    display: none;
+  }
 }
