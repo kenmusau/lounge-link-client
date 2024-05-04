@@ -18,13 +18,13 @@ function Links() {
         </li>
         <li>
           <a className="home-nav-link" href="#">
-            services
+            Services
           </a>
         </li>
 
         <li>
           <a className="home-nav-link" href="#">
-            contact
+            Contact
           </a>
         </li>
         {/* <li>

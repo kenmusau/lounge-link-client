@@ -19,7 +19,7 @@ function SideBar() {
         className={`sidebar-menu ${open ? "sidebar-open" : "sidebar-close"}`}
       >
         {links.map((link) => (
-          <a href={link} className="links" key={link}>
+          <a href="#" className="links" key={link}>
             {link}
           </a>
         ))}
