@@ -1,6 +1,6 @@
 import "../pages/Home.css";
-import Links from "./Space/Links";
-import SideBar from "./Space/SideBar";
+import Links from "./Links";
+import SideBar from "./SideBar";
 
 function Header() {
   return (

@@ -27,6 +27,7 @@
 /* Header section */
 
 .home-section-header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,7 +104,8 @@
 
 .section-hero {
   background-color: #f8f9fa;
-  margin: 0 2rem;
+
+  padding: 0 2rem;
 }
 
 .hero {
@@ -456,8 +458,9 @@
     display: none;
   }
   .home-section-header .sidebar {
-    display: block;
+    display: flex;
   }
+
   .hero {
     grid-template-columns: auto;
     text-align: center;
