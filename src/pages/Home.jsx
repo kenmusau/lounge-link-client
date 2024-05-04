@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <div className="home">
+    <div className="home" id="home">
       <Header />
       <main>
         <HeroSection />

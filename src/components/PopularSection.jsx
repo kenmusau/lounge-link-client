@@ -10,7 +10,7 @@ import hotel5 from "../assets/hotels/hotel-5.jpg";
 
 function PopularSection() {
   return (
-    <section className="section-popular">
+    <section className="section-popular" id="popular">
       <div className="container">
         <h2 className="heading-secondary popular-heading">
           Our Most Popular Selections

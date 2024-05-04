@@ -6,18 +6,18 @@ function Links() {
     <div>
       <ul className="home-nav-list">
         <li>
-          <a className="home-nav-link" href="#">
+          <a className="home-nav-link" href="#home">
             Home
           </a>
         </li>
 
         <li>
-          <a className="home-nav-link" href="#">
+          <a className="home-nav-link" href="#popular">
             About us
           </a>
         </li>
         <li>
-          <a className="home-nav-link" href="#">
+          <a className="home-nav-link" href="#Services">
             Services
           </a>
         </li>

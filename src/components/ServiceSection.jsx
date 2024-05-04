@@ -7,7 +7,7 @@ import { LuPackageOpen } from "react-icons/lu";
 
 function ServiceSection() {
   return (
-    <section className="section-services">
+    <section className="section-services" id="Services">
       <div className="container">
         <h2 className="heading-secondary popular-heading">Our Services</h2>
         <p className="services-subtitle">
