@@ -31,6 +31,24 @@
   overflow: hidden;
 }
 
+.back-home {
+  font-size: 1.8em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #e67700;
+}
+.back-home a {
+  color: #e67700;
+  text-decoration: none;
+}
+
+.back-home a:hover {
+  text-decoration: underline;
+}
+
 .form-heading {
   text-align: center;
   font-size: 5rem;

@@ -10,6 +10,7 @@ import { useUser } from "../../context/UserContext";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { SiApple } from "react-icons/si";
+import { IoMdHome } from "react-icons/io";
 
 function LoginForm() {
   // const [error, setError] = useState([]);
@@ -68,6 +69,10 @@ function LoginForm() {
         </div>
         <div className="form-container">
           <form onSubmit={handleSubmit(onSubmit)} className="form">
+            <div className="back-home">
+              <IoMdHome />
+              <Link to="/home">Home</Link>
+            </div>
             <div className="form-title">
               <h2 className="form-heading">Welcome Back!</h2>
               <p className="heading-description">
