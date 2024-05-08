@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserContext";
 
 // icons
-import { FcGoogle } from "react-icons/fc";
+import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { SiApple } from "react-icons/si";
 
@@ -107,7 +107,7 @@ function LoginForm() {
                 <hr />
               </div>
               <div className="socials">
-                <FcGoogle />
+                <FaGoogle />
                 <FaFacebook />
                 <SiApple />
               </div>
@@ -120,7 +120,10 @@ function LoginForm() {
           ))} */}
             <div className="sign-up-redirect">
               <p>
-                Not a member? <Link to="/signup">Register Now</Link>
+                Not a member?{" "}
+                <Link to="/signup">
+                  <span>Register Now</span>
+                </Link>
               </p>
             </div>
           </form>

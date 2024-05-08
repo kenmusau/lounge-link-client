@@ -120,3 +120,40 @@
   background-color: #ccc;
   margin: 0 10px;
 }
+
+.login-with-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.sign-up-redirect {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-redirect p {
+  font-size: 1.8rem;
+}
+
+.sign-up-redirect a {
+  text-decoration: none;
+}
+
+.sign-up-redirect span {
+  color: #e67700;
+}
+
+.sign-up-redirect span:hover {
+  text-decoration: underline;
+}
