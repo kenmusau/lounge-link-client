@@ -71,7 +71,7 @@ function LoginForm() {
           <form onSubmit={handleSubmit(onSubmit)} className="form">
             <div className="back-home">
               <IoMdHome />
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </div>
             <div className="form-title">
               <h2 className="form-heading">Welcome Back!</h2>

@@ -17,7 +17,7 @@ function MainRoutes() {
   return (
     <div>
       <Routes>
-        <Route path="home" index element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="login" element={<LoginForm />} />
         <Route path="app" element={<AppLayout />}>
           <Route index element={<Navigate replace to="dashboard" />} />
