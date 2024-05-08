@@ -1,10 +1,15 @@
 import "./LoginForm.css";
 import { useForm } from "react-hook-form";
-import loginPic from "../../assets/loginPic.png";
+// import loginPic from "../../assets/loginPic.png";
 import { baseurl } from "../../utils";
 
 import { Link, useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserContext";
+
+// icons
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
+import { SiApple } from "react-icons/si";
 
 function LoginForm() {
   // const [error, setError] = useState([]);
@@ -59,37 +64,67 @@ function LoginForm() {
     <section className="login-form-section">
       <div className="login-form-container">
         <div className="login-image">
-          <h2 className="image-login-heading">Welcome back</h2>
-          <img src={loginPic} alt="Login illustration" />
+          <img src="loginpic.jpg" alt="Login illustration" />
         </div>
+        <div className="form-container">
+          <form onSubmit={handleSubmit(onSubmit)} className="form">
+            <div className="form-title">
+              <h2 className="form-heading">Welcome Back!</h2>
+              <p className="heading-description">
+                Dive into a world of comfort and relaxation. <br />
+                Unlock your dream vacation!
+              </p>
+            </div>
+            <div className="form-inputs">
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="username"
+                {...register("username")}
+              />
 
-        <form onSubmit={handleSubmit(onSubmit)} className="form">
-          <h2 className="form-heading">Sign In</h2>
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            name="username"
-            id="username"
-            {...register("username")}
-          />
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            {...register("password")}
-          />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="password"
+                {...register("password")}
+              />
 
-          <button className="form-submit">Submit</button>
-          {/* {error.map((error, i) => (
+              <div className="reset-password">
+                <p>Forgot Password?</p>
+              </div>
+              <div className="form-submit">
+                <button>Login</button>
+              </div>
+            </div>
+
+            <div className="login-with-socials">
+              <div className="cont-with-divider">
+                <hr />
+                <p>or continue with</p>
+                <hr />
+              </div>
+              <div className="socials">
+                <FcGoogle />
+                <FaFacebook />
+                <SiApple />
+              </div>
+            </div>
+
+            {/* {error.map((error, i) => (
             <p key={i} className="form-error">
               {error}
             </p>
           ))} */}
-          <p>
-            Have no account? <Link to="/signup">Sign Up</Link>
-          </p>
-        </form>
+            <div className="sign-up-redirect">
+              <p>
+                Not a member? <Link to="/signup">Register Now</Link>
+              </p>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   );

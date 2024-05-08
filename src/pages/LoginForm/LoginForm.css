@@ -1,51 +1,89 @@
 .login-form-section {
-  font-size: 2rem;
-  color: #444;
-
-  background-image: linear-gradient(to right, #fff, #fdf1e6);
-
-  /* 
-  display: flex;
-  justify-content: center;
-  align-items: center; */
+  height: 100vh;
 }
 
 .login-form-container {
-  padding: 6.2rem;
-  height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+
+  color: #343a40;
 }
 
-.form label {
+.login-image img {
   display: block;
-  margin-bottom: 0.5rem;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-container .form {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  overflow: hidden;
+}
+
+.form-heading {
+  text-align: center;
+  font-size: 5rem;
+}
+
+.heading-description {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 .form input {
+  box-sizing: content-box;
   display: block;
   margin-bottom: 2rem;
-  border-radius: 10px;
-  padding: 0 0.5rem;
-  height: 5rem;
-  width: 60%;
-  border-radius: 1px solid #444;
-  font-size: 1.5rem;
+  padding: 2rem 3rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ffc078;
+  background-color: #f8f9fa;
+
+  font-size: 1.6rem;
+  transition: all 0.3s ease-out;
+}
+
+.form-inputs input[type="text"]:focus,
+.form-inputs input[type="password"]:focus {
+  outline: none;
+  border-bottom: 2px solid #f08c00;
 }
 
 .form h2 {
   margin-bottom: 2rem;
 }
 
-.image-login-heading {
-  text-align: center;
+.reset-password {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0;
 }
-.login-image img {
-  width: 60rem;
+.reset-password p {
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
-.form-submit {
+.reset-password p:hover {
+  color: #cf6b00;
+}
+
+.form-submit button {
   display: inline-block;
   padding: 1.1rem 3.2rem;
   border-radius: 10px;
@@ -56,16 +94,29 @@
   color: #fff;
   background-color: #e67700;
   cursor: pointer;
-  width: 60%;
+  width: 100%;
 
   margin-bottom: 2rem;
 }
 
-.form-submit:hover {
+.form-submit button:hover {
   background-color: #cf6b00;
 }
 
 .form-error {
   color: red;
   font-size: 1.6rem;
+}
+
+.cont-with-divider {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.cont-with-divider hr {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
 }
