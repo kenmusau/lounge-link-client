@@ -1,6 +1,3 @@
-Certainly, here's a sample README for your "LoungeLink" project:
-
----
 
 # LoungeLink
 
@@ -77,6 +74,4 @@ We welcome contributions to improve LoungeLink. If you'd like to contribute, ple
 
 LoungeLink is released under the [MIT License](LICENSE), which means you are free to use, modify, and distribute this project as long as you provide proper attribution and don't hold the creators liable. For more details, please refer to the included LICENSE file.
 
----
 
-This README provides an introduction to the LoungeLink project, instructions for setting it up locally, and guidelines for contributing. Customize it to suit your project's specific details and requirements.
