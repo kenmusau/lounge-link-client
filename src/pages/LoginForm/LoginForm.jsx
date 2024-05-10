@@ -65,7 +65,7 @@ function LoginForm() {
     <section className="login-form-section">
       <div className="login-form-container">
         <div className="login-image">
-          <img src="loginpic.jpg" alt="Login illustration" />
+          <img src="loginpic1.jpg" alt="Login illustration" />
         </div>
         <div className="form-container">
           <form onSubmit={handleSubmit(onSubmit)} className="form">
