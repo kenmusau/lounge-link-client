@@ -1,0 +1,45 @@
+.page-not-found {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a2238;
+}
+
+.error-code {
+  font-size: 10rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.25em;
+}
+
+.error-message {
+  background-color: #ff6a3d;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  border-radius: 0.25rem;
+  transform: rotate(12deg);
+  position: absolute;
+}
+
+.go-home-button {
+  margin-top: 1.25rem;
+  background-color: #ff6a3d;
+  padding: 1rem 1.6rem;
+}
+
+.go-home-link {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1a2238;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.go-home-link:hover {
+  color: #fff;
+}
