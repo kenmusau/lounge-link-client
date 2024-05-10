@@ -80,6 +80,7 @@
 .form-inputs input[type="text"]:focus,
 .form-inputs input[type="password"]:focus {
   outline: none;
+
   border-bottom: 2px solid #f08c00;
 }
 
