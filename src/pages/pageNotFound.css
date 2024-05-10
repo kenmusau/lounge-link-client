@@ -5,18 +5,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1a2238;
+  background-color: #f8f9fa;
 }
 
 .error-code {
   font-size: 10rem;
   font-weight: 800;
-  color: #fff;
+  color: #1a2238;
   letter-spacing: 0.25em;
 }
 
 .error-message {
   background-color: #ff6a3d;
+  color: #fff;
   padding: 0.5rem 1rem;
   font-size: 1.5rem;
   border-radius: 0.25rem;
@@ -26,20 +27,20 @@
 
 .go-home-button {
   margin-top: 1.25rem;
-  background-color: #ff6a3d;
+  background-color: #ec5122;
   padding: 1rem 1.6rem;
+}
+
+.go-home-button:hover {
+  background-color: #1a2238;
 }
 
 .go-home-link {
   font-size: 2rem;
   font-weight: 500;
-  color: #1a2238;
+  color: #fff;
   text-decoration: none;
   outline: none;
   cursor: pointer;
   position: relative;
-}
-
-.go-home-link:hover {
-  color: #fff;
 }
