@@ -32,45 +32,48 @@ function SignUp() {
   }
   return (
     <div className="client-signup-container">
-      <form onSubmit={handleSubmit(onSubmit)} className="client-signup">
-        <label htmlFor="username">UserName</label>
-        <input
-          type="text"
-          name="username"
-          id="username"
-          placeholder="Your username"
-          {...register("username")}
-        />
+      <div className="image-container"></div>
+      <div className="form-container">
+        <form onSubmit={handleSubmit(onSubmit)} className="client-signup">
+          <label htmlFor="username">UserName</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Your username"
+            {...register("username")}
+          />
 
-        <label htmlFor="First_name">First name</label>
-        <input
-          type="text"
-          name="First_name"
-          id="First_name"
-          placeholder="Your First Name"
-          {...register("First_name")}
-        />
+          <label htmlFor="First_name">First name</label>
+          <input
+            type="text"
+            name="First_name"
+            id="First_name"
+            placeholder="Your First Name"
+            {...register("First_name")}
+          />
 
-        <label htmlFor="last_name">Last Name</label>
-        <input
-          type="text"
-          name="last_name"
-          id="last_name"
-          placeholder="Your Last Name"
-          {...register("last_name")}
-        />
+          <label htmlFor="last_name">Last Name</label>
+          <input
+            type="text"
+            name="last_name"
+            id="last_name"
+            placeholder="Your Last Name"
+            {...register("last_name")}
+          />
 
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="*********"
-          {...register("password")}
-        />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="*********"
+            {...register("password")}
+          />
 
-        <button>Submit</button>
-      </form>
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
   );
 }
