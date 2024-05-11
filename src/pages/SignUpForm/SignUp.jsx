@@ -32,7 +32,16 @@ function SignUp() {
   }
   return (
     <div className="client-signup-container">
-      <div className="image-container"></div>
+      <div className="image-container">
+        <div className="image">
+          <blockquote>
+            <p>
+              Words can be like X-rays, if you use them properly—they’ll go
+              through anything. You read and you’re pierced.
+            </p>
+          </blockquote>
+        </div>
+      </div>
       <div className="form-container">
         <form onSubmit={handleSubmit(onSubmit)} className="client-signup">
           <label htmlFor="username">UserName</label>
