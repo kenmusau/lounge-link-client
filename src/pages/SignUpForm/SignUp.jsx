@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { SiApple } from "react-icons/si";
+import { IoMdHome } from "react-icons/io";
 
 function SignUp() {
   const { register, handleSubmit } = useForm();
@@ -38,7 +39,7 @@ function SignUp() {
   return (
     <div className="client-signup-container">
       <div className="image-container">
-        <div className="image">
+        <div className="signup-image">
           <blockquote>
             <p>
               Discover your perfect getaway with ease. Sign up now and unlock a
@@ -48,6 +49,10 @@ function SignUp() {
         </div>
       </div>
       <div className="signup-form-container">
+        <div className="back-home">
+          <IoMdHome />
+          <Link to="/">Home</Link>
+        </div>
         <div className="heading">
           <h1>Create Your Account</h1>
           <p>

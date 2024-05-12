@@ -8,7 +8,7 @@
   height: 100vh;
 }
 
-.image {
+.signup-image {
   position: relative;
   background-image: linear-gradient(
       to bottom,
@@ -23,18 +23,20 @@
   border-radius: 10px;
 }
 
-.image p {
+.signup-image p {
   position: absolute;
   top: 70%;
   color: #fff;
   font-size: 3rem;
+  margin: 0 10rem;
+  width: 80%;
 }
 
-.image blockquote p::before {
+.signup-image blockquote p::before {
   content: "\201C";
 }
 
-.image blockquote p::after {
+.signup-image blockquote p::after {
   content: "\201D";
 }
 
@@ -88,6 +90,10 @@
   gap: 7rem;
 }
 
+.signup-form-container {
+  position: relative;
+}
+
 .signup-form-container .form-submit {
   padding: 1.5rem 3.2rem;
   width: 100%;
@@ -98,6 +104,12 @@
   font-size: 1.6rem;
   cursor: pointer;
   margin-bottom: 1.5rem;
+}
+
+.back-home {
+  position: absolute;
+  top: 5%;
+  right: 10%;
 }
 
 .signup-form-container .form-submit:hover {
@@ -137,4 +149,47 @@
 
 .signup-socials .icon {
   cursor: pointer;
+}
+
+@media (max-width: 100em) {
+  .client-signup {
+    width: 70%;
+  }
+  .signup-image p {
+    margin: 0 5rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 55em) {
+  .client-signup-container {
+    grid-template-columns: auto;
+    gap: 1.5ren;
+  }
+  .client-signup {
+    width: 70%;
+  }
+
+  .signup-form-container {
+    padding-top: 15rem;
+  }
+  .signup-form-container .heading h1 {
+    font-size: 3.5rem;
+  }
+
+  .image-container {
+    display: none;
+  }
+  .input-names {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 43em) {
+  .client-signup {
+    width: 80%;
+  }
+  .signup-form-container .heading h1 {
+    font-size: 3rem;
+  }
 }
