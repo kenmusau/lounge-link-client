@@ -50,7 +50,9 @@ function SignUp() {
       <div className="signup-form-container">
         <div className="heading">
           <h1>Create Your Account</h1>
-          <p>Sign up now and follow your dreams</p>
+          <p>
+            Sign up now and <span>follow your dreams</span>
+          </p>
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className="client-signup">
           <div className="input-names">

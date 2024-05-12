@@ -10,11 +10,17 @@
   color: #343a40;
 }
 
+.login-image {
+  padding: 1.5rem;
+  height: 100vh;
+}
+
 .login-image img {
   display: block;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .form-container {
@@ -111,7 +117,7 @@
 
   border: none;
   color: #fff;
-  background-color: #e67700;
+  background-color: #fd7e14;
   cursor: pointer;
   width: 100%;
 
@@ -119,7 +125,7 @@
 }
 
 .form-submit button:hover {
-  background-color: #cf6b00;
+  background-color: #f76707;
 }
 
 .form-error {
