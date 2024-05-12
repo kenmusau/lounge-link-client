@@ -18,7 +18,7 @@
     url("signupic1.jpg");
   background-size: cover;
   background-position: center;
-  background-color: #fff3bf;
+  /* background-color: #fff3bf; */
   height: 100%;
   border-radius: 10px;
 }
