@@ -1,6 +1,11 @@
 import { useForm } from "react-hook-form";
 import "./signup.css";
 import { baseurl } from "../../utils";
+import { Link } from "react-router-dom";
+
+import { FaGoogle } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { SiApple } from "react-icons/si";
 
 function SignUp() {
   const { register, handleSubmit } = useForm();
@@ -36,42 +41,44 @@ function SignUp() {
         <div className="image">
           <blockquote>
             <p>
-              Words can be like X-rays, if you use them properly—they’ll go
-              through anything. You read and you’re pierced.
+              Discover your perfect getaway with ease. Sign up now and unlock a
+              world of unforgettable travel experiences!
             </p>
           </blockquote>
         </div>
       </div>
-      <div className="form-container">
+      <div className="signup-form-container">
+        <div className="heading">
+          <h1>Create Your Account</h1>
+          <p>Sign up now and follow your dreams</p>
+        </div>
         <form onSubmit={handleSubmit(onSubmit)} className="client-signup">
-          <label htmlFor="username">UserName</label>
+          <div className="input-names">
+            <input
+              type="text"
+              name="First_name"
+              id="First_name"
+              placeholder="First Name"
+              {...register("First_name")}
+            />
+
+            <input
+              type="text"
+              name="last_name"
+              id="last_name"
+              placeholder="Last Name"
+              {...register("last_name")}
+            />
+          </div>
+
           <input
             type="text"
             name="username"
             id="username"
-            placeholder="Your username"
+            placeholder="username"
             {...register("username")}
           />
 
-          <label htmlFor="First_name">First name</label>
-          <input
-            type="text"
-            name="First_name"
-            id="First_name"
-            placeholder="Your First Name"
-            {...register("First_name")}
-          />
-
-          <label htmlFor="last_name">Last Name</label>
-          <input
-            type="text"
-            name="last_name"
-            id="last_name"
-            placeholder="Your Last Name"
-            {...register("last_name")}
-          />
-
-          <label htmlFor="password">Password</label>
           <input
             type="password"
             name="password"
@@ -80,8 +87,21 @@ function SignUp() {
             {...register("password")}
           />
 
-          <button>Submit</button>
+          <button className="form-submit">Create Your Account</button>
+          <p className="login-redirect">
+            Already have an account? <Link to="/login"> Log in</Link>
+          </p>
         </form>
+        <div className="divider">
+          <hr />
+          <p>OR</p>
+          <hr />
+        </div>
+        <div className="signup-socials">
+          <FaGoogle className="icon" />
+          <FaFacebook className="icon" />
+          <SiApple className="icon" />
+        </div>
       </div>
     </div>
   );

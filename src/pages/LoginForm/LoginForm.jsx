@@ -112,9 +112,9 @@ function LoginForm() {
                 <hr />
               </div>
               <div className="socials">
-                <FaGoogle />
-                <FaFacebook />
-                <SiApple />
+                <FaGoogle className="icon" />
+                <FaFacebook className="icon" />
+                <SiApple className="icon" />
               </div>
             </div>
 
