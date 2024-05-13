@@ -12,6 +12,7 @@ function SpaceCardItem({ space }) {
           <h3>{space.name}</h3>
           <p>{space.location}</p>
           <p>{space.price}</p>
+          <p>{space.status}</p>
         </div>
       </Link>
     </div>

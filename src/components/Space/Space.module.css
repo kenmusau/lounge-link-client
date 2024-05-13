@@ -9,9 +9,10 @@
   height: 100vh;
 }
 
-/* .space {
-  display: flex;
-} */
+.space {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 
 .space img {
   width: 40%;
