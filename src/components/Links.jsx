@@ -12,9 +12,9 @@ function Links() {
         </li>
 
         <li>
-          <a className="home-nav-link" href="#popular">
+          <Link className="home-nav-link" to="map">
             Map
-          </a>
+          </Link>
         </li>
         <li>
           <a className="home-nav-link" href="#Services">

@@ -13,6 +13,8 @@ import Settings from "../components/Client/Settings";
 import SpaceLayout from "../pages/Space/SpacesLayout";
 import Space from "../components/Space/Space";
 
+import MapLayout from "../pages/MapLayout";
+
 function MainRoutes() {
   return (
     <div>
@@ -28,6 +30,7 @@ function MainRoutes() {
           <Route path="visited" element={<Visited />} />
           <Route path="settings" element={<Settings />} />
         </Route>
+        <Route path="map" element={ <MapLayout/> } />
         <Route path="signup" element={<SignUp />} />
         <Route path="adminDash" element={<AdminDash />} />
         <Route path="*" element={<PageNotFound />} />
