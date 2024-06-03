@@ -13,7 +13,7 @@ function Links() {
 
         <li>
           <a className="home-nav-link" href="#popular">
-            About us
+            Map
           </a>
         </li>
         <li>
