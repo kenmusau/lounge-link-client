@@ -5,16 +5,16 @@ function Map() {
   return (
     <div className="map-container">
       <MapContainer
-        center={[51.505, -0.09]}
+        center={[-1.2864, 36.8172]}
         zoom={13}
-        scrollWheelZoom={false}
+        scrollWheelZoom={true}
         className={styles.map}
       >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          attribution='&copy; <a href="https://www.openstreetmap.fr/hot/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[51.505, -0.09]}>
+        <Marker position={[-1.2864, 36.8172]}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
