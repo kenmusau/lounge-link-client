@@ -14,6 +14,7 @@ import SpaceLayout from "../pages/Space/SpacesLayout";
 import Space from "../components/Space/Space";
 
 import MapLayout from "../pages/MapLayout";
+import ProtectedRoutes from "./ProtectedRoutes";
 
 function MainRoutes() {
   return (
@@ -21,7 +22,14 @@ function MainRoutes() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="login" element={<LoginForm />} />
-        <Route path="app" element={<AppLayout />}>
+        <Route
+          path="app"
+          element={
+            <ProtectedRoutes>
+              <AppLayout />
+            </ProtectedRoutes>
+          }
+        >
           <Route index element={<Navigate replace to="dashboard" />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="spaces" element={<SpaceLayout />} />
@@ -30,7 +38,7 @@ function MainRoutes() {
           <Route path="visited" element={<Visited />} />
           <Route path="settings" element={<Settings />} />
         </Route>
-        <Route path="map" element={ <MapLayout/> } />
+        <Route path="map" element={<MapLayout />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="adminDash" element={<AdminDash />} />
         <Route path="*" element={<PageNotFound />} />

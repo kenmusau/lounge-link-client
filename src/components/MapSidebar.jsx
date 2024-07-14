@@ -1,14 +1,15 @@
 import { useSpace } from "../context/SpaceContext";
 import styles from "./MapSidebar.module.css";
-import SpaceCardItem from "./Space/SpaceCardItem";
+
+import SpaceItem from "./Space/SpaceItem";
 function MapSidebar() {
   const { spaces } = useSpace();
   return (
     <div className={styles.sidebarContainer}>
       <h1>This page is work in progress. Cool Feature Coming up</h1>
-      <ul>
-        {spaces.map((space) => (
-          <SpaceCardItem key={space.id} space={space} />
+      <ul className={styles.spaceList}>
+        {spaces.slice(0, 10).map((space) => (
+          <SpaceItem key={space.id} space={space} />
         ))}
       </ul>
       <footer className={styles.footer}>

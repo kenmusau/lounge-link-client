@@ -16,7 +16,7 @@ function LoginForm() {
   // const [error, setError] = useState([]);
   const { register, handleSubmit } = useForm();
 
-  const { setUser } = useUser();
+  const { setUser, setIsAuthenticated, isAuthenticated } = useUser();
 
   const navigate = useNavigate();
 
@@ -45,12 +45,14 @@ function LoginForm() {
         localStorage.setItem("jwt", data.jwt);
         if (user.role === "admin") {
           setUser(user);
+          setIsAuthenticated(true);
           console.log(user.role);
-          navigate("/adminDash");
+          isAuthenticated && navigate("/adminDash", { replace: true });
         } else {
           setUser(user);
+          setIsAuthenticated(true);
           console.log(user.role);
-          navigate("/app");
+          isAuthenticated && navigate("/app", { replace: true });
         }
       } else {
         // setError(data?.error);

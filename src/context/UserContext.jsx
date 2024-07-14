@@ -7,8 +7,9 @@ const UserContext = createContext();
 function UserProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  console.log(user);
+  console.log(isAuthenticated);
 
   const token = localStorage.getItem("jwt");
 
@@ -35,7 +36,9 @@ function UserProvider({ children }) {
   }, [token]);
 
   return (
-    <UserContext.Provider value={{ user, setUser, loading }}>
+    <UserContext.Provider
+      value={{ user, setUser, loading, isAuthenticated, setIsAuthenticated }}
+    >
       {children}
     </UserContext.Provider>
   );
