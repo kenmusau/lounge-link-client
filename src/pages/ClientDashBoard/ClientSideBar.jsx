@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import styles from "./ClientSideBar.module.css";
 
@@ -12,13 +12,11 @@ import { RiLogoutBoxFill } from "react-icons/ri";
 import { useUser } from "../../context/UserContext";
 
 function ClientSideBar() {
-  const { setUser } = useUser();
-  const navigate = useNavigate();
+  const { logoutUser } = useUser();
 
-  function handleLogout() {
-    localStorage.removeItem("jwt");
-    setUser(null);
-    navigate("/login");
+  function handleLogout(e) {
+    e.preventDefault();
+    logoutUser();
   }
   return (
     <div className={styles["client-sidebar"]}>

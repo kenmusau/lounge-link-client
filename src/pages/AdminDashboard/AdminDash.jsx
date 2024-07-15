@@ -1,16 +1,12 @@
 import "./adminDash.css";
 import { useUser } from "../../context/UserContext";
-import { useNavigate } from "react-router-dom";
 
 function AdminDash() {
-  const { user, setUser } = useUser();
+  const { user, logoutUser } = useUser();
 
-  const navigate = useNavigate();
-
-  function handleLogout() {
-    localStorage.removeItem("jwt");
-    setUser(null);
-    navigate("/login");
+  function handleLogout(e) {
+    e.preventDefault();
+    logoutUser();
   }
 
   return (

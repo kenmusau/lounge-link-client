@@ -1,9 +1,9 @@
 import "./LoginForm.css";
 import { useForm } from "react-hook-form";
 // import loginPic from "../../assets/loginPic.png";
-import { baseurl } from "../../utils";
+// import { baseurl } from "../../utils";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useUser } from "../../context/UserContext";
 
 // icons
@@ -16,9 +16,9 @@ function LoginForm() {
   // const [error, setError] = useState([]);
   const { register, handleSubmit } = useForm();
 
-  const { setUser, setIsAuthenticated, isAuthenticated } = useUser();
+  const { loginUser } = useUser();
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -29,39 +29,39 @@ function LoginForm() {
     loginUser(user);
   };
 
-  async function loginUser(user) {
-    try {
-      const response = await fetch(`${baseurl}/login`, {
-        method: "POST",
-        body: JSON.stringify(user),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      });
+  // async function loginUser(user) {
+  //   try {
+  //     const response = await fetch(`${baseurl}/login`, {
+  //       method: "POST",
+  //       body: JSON.stringify(user),
+  //       headers: {
+  //         "Content-type": "application/json; charset=UTF-8",
+  //       },
+  //     });
 
-      const data = await response.json();
-      if (response.ok) {
-        const user = data.user;
-        localStorage.setItem("jwt", data.jwt);
-        if (user.role === "admin") {
-          setUser(user);
-          setIsAuthenticated(true);
-          console.log(user.role);
-          isAuthenticated && navigate("/adminDash", { replace: true });
-        } else {
-          setUser(user);
-          setIsAuthenticated(true);
-          console.log(user.role);
-          isAuthenticated && navigate("/app", { replace: true });
-        }
-      } else {
-        // setError(data?.error);
-        console.log("error here", data);
-      }
-    } catch (error) {
-      console.error("Error during login:", error);
-    }
-  }
+  //     const data = await response.json();
+  //     if (response.ok) {
+  //       const user = data.user;
+  //       localStorage.setItem("jwt", data.jwt);
+  //       if (user.role === "admin") {
+  //         setUser(user);
+  //         setIsAuthenticated(true);
+  //         console.log(user.role);
+  //         isAuthenticated && navigate("/adminDash", { replace: true });
+  //       } else {
+  //         setUser(user);
+  //         setIsAuthenticated(true);
+  //         console.log(user.role);
+  //         isAuthenticated && navigate("/app", { replace: true });
+  //       }
+  //     } else {
+  //       // setError(data?.error);
+  //       console.log("error here", data);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error during login:", error);
+  //   }
+  // }
 
   return (
     <section className="login-form-section">
