@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useSpace } from "../../context/SpaceContext";
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 import { ClipLoader } from "react-spinners";
 
 import { HiOutlineLocationMarker } from "react-icons/hi";
@@ -8,7 +8,7 @@ import { HiOutlineCash } from "react-icons/hi";
 
 import styles from "./Space.module.css";
 
-function Space() {
+const Space = memo(function Space() {
   const { getSpace, currentSpace, isLoading } = useSpace();
   const { name, description, location, price, contact, image } = currentSpace;
 
@@ -17,7 +17,7 @@ function Space() {
 
   useEffect(() => {
     getSpace(id);
-  }, [id]);
+  }, [getSpace, id]);
 
   console.log(currentSpace);
 
@@ -91,6 +91,6 @@ function Space() {
       </div>
     </div>
   );
-}
+});
 
 export default Space;

@@ -135,6 +135,16 @@ function UserProvider({ children }) {
     navigate("/login");
   }
 
+  // const value = useMemo(() => {
+  //   return {
+  //     user,
+  //     isLoading,
+  //     isAuthenticated,
+  //     loginUser,
+  //     logoutUser,
+  //   };
+  // }, [isAuthenticated, isLoading, loginUser, logoutUser, user]);
+
   return (
     <UserContext.Provider
       value={{
