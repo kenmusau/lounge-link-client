@@ -17,7 +17,7 @@ const Space = memo(function Space() {
 
   useEffect(() => {
     getSpace(id);
-  }, [getSpace, id]);
+  }, [id]);
 
   console.log(currentSpace);
 

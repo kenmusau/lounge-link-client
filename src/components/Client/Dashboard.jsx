@@ -1,7 +1,8 @@
+import { memo } from "react";
 import styles from "./Dashboard.module.css";
 import { useUser } from "../../context/UserContext";
 
-function Dashboard() {
+const Dashboard = memo(function Dashboard() {
   const { user } = useUser();
   console.log(user);
   return (
@@ -34,6 +35,6 @@ function Dashboard() {
       </div>
     </div>
   );
-}
+});
 
 export default Dashboard;

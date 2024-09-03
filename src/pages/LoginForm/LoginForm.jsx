@@ -1,3 +1,4 @@
+import { memo } from "react";
 import "./LoginForm.css";
 import { useForm } from "react-hook-form";
 // import loginPic from "../../assets/loginPic.png";
@@ -12,11 +13,13 @@ import { FaFacebook } from "react-icons/fa";
 import { SiApple } from "react-icons/si";
 import { IoMdHome } from "react-icons/io";
 
-function LoginForm() {
+import { ScaleLoader } from "react-spinners";
+
+const LoginForm = memo(function LoginForm() {
   // const [error, setError] = useState([]);
   const { register, handleSubmit } = useForm();
 
-  const { loginUser } = useUser();
+  const { loginUser, isLoading } = useUser();
 
   // const navigate = useNavigate();
 
@@ -28,40 +31,6 @@ function LoginForm() {
     };
     loginUser(user);
   };
-
-  // async function loginUser(user) {
-  //   try {
-  //     const response = await fetch(`${baseurl}/login`, {
-  //       method: "POST",
-  //       body: JSON.stringify(user),
-  //       headers: {
-  //         "Content-type": "application/json; charset=UTF-8",
-  //       },
-  //     });
-
-  //     const data = await response.json();
-  //     if (response.ok) {
-  //       const user = data.user;
-  //       localStorage.setItem("jwt", data.jwt);
-  //       if (user.role === "admin") {
-  //         setUser(user);
-  //         setIsAuthenticated(true);
-  //         console.log(user.role);
-  //         isAuthenticated && navigate("/adminDash", { replace: true });
-  //       } else {
-  //         setUser(user);
-  //         setIsAuthenticated(true);
-  //         console.log(user.role);
-  //         isAuthenticated && navigate("/app", { replace: true });
-  //       }
-  //     } else {
-  //       // setError(data?.error);
-  //       console.log("error here", data);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error during login:", error);
-  //   }
-  // }
 
   return (
     <section className="login-form-section">
@@ -103,7 +72,13 @@ function LoginForm() {
                 <p>Forgot Password?</p>
               </div>
               <div className="form-submit">
-                <button>Login</button>
+                {isLoading ? (
+                  <button>
+                    <ScaleLoader color="#fff" height={11} />
+                  </button>
+                ) : (
+                  <button>Login</button>
+                )}
               </div>
             </div>
 
@@ -138,6 +113,40 @@ function LoginForm() {
       </div>
     </section>
   );
-}
+});
 
 export default LoginForm;
+
+// async function loginUser(user) {
+//   try {
+//     const response = await fetch(`${baseurl}/login`, {
+//       method: "POST",
+//       body: JSON.stringify(user),
+//       headers: {
+//         "Content-type": "application/json; charset=UTF-8",
+//       },
+//     });
+
+//     const data = await response.json();
+//     if (response.ok) {
+//       const user = data.user;
+//       localStorage.setItem("jwt", data.jwt);
+//       if (user.role === "admin") {
+//         setUser(user);
+//         setIsAuthenticated(true);
+//         console.log(user.role);
+//         isAuthenticated && navigate("/adminDash", { replace: true });
+//       } else {
+//         setUser(user);
+//         setIsAuthenticated(true);
+//         console.log(user.role);
+//         isAuthenticated && navigate("/app", { replace: true });
+//       }
+//     } else {
+//       // setError(data?.error);
+//       console.log("error here", data);
+//     }
+//   } catch (error) {
+//     console.error("Error during login:", error);
+//   }
+// }

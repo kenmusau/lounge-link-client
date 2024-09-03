@@ -6,7 +6,7 @@ const UserContext = createContext();
 
 const initialState = {
   user: null,
-  isLoading: true,
+  isLoading: false,
   isAuthenticated: false,
   error: "",
 };
@@ -44,7 +44,7 @@ function reducer(state, action) {
     case "error":
       return {
         ...state,
-        isLoading: true,
+        isLoading: false,
         isAuthenticated: false,
         error: action.payload,
       };
@@ -78,6 +78,7 @@ function UserProvider({ children }) {
 
   useEffect(() => {
     async function fetchUser() {
+      dispatch({ type: "Loading" });
       try {
         const resp = await fetch(`${baseurl}/currentUser`, {
           method: "GET",
@@ -98,6 +99,7 @@ function UserProvider({ children }) {
   }, [token]);
 
   async function loginUser(user) {
+    dispatch({ type: "Loading" });
     try {
       const response = await fetch(`${baseurl}/login`, {
         method: "POST",
@@ -123,6 +125,7 @@ function UserProvider({ children }) {
       } else {
         // setError(data?.error);
         console.log("error here", data);
+        dispatch({ type: "error", payload: data });
       }
     } catch (error) {
       console.error("Error during login:", error);
