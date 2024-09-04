@@ -23,13 +23,13 @@ const LoginForm = memo(function LoginForm() {
 
   // const navigate = useNavigate();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data);
     const user = {
       username: data.username,
       password: data.password,
     };
-    loginUser(user);
+    await loginUser(user);
   };
 
   return (
