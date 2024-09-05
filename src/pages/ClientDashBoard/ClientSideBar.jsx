@@ -10,8 +10,9 @@ import { FaHistory } from "react-icons/fa";
 import { MdManageAccounts } from "react-icons/md";
 import { RiLogoutBoxFill } from "react-icons/ri";
 import { useUser } from "../../context/UserContext";
+import { memo } from "react";
 
-function ClientSideBar() {
+const ClientSideBar = memo(function ClientSideBar() {
   const { logoutUser } = useUser();
 
   function handleLogout(e) {
@@ -61,6 +62,6 @@ function ClientSideBar() {
       </ul>
     </div>
   );
-}
+});
 
 export default ClientSideBar;
