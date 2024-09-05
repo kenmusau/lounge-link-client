@@ -1,4 +1,11 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useReducer,
+} from "react";
 import { baseurl } from "../utils";
 
 const SpaceContext = createContext();
@@ -51,7 +58,7 @@ function SpaceProvider({ children }) {
     fetchSpaces();
   }, []);
 
-  async function getSpace(id) {
+  const getSpace = useCallback(async function getSpace(id) {
     // if (Number(id) === currentSpace.id) return;
     dispatch({ type: "loading" });
     try {
@@ -64,13 +71,14 @@ function SpaceProvider({ children }) {
         payload: "There was error loading a spaces...",
       });
     }
-  }
+  }, []);
+
+  const value = useMemo(() => {
+    return { spaces, currentSpace, isLoading, getSpace };
+  }, [spaces, currentSpace, isLoading, getSpace]);
+
   return (
-    <SpaceContext.Provider
-      value={{ spaces, currentSpace, isLoading, getSpace }}
-    >
-      {children}
-    </SpaceContext.Provider>
+    <SpaceContext.Provider value={value}>{children}</SpaceContext.Provider>
   );
 }
 

@@ -3,8 +3,9 @@ import SpaceCardItem from "./SpaceCardItem";
 import styles from "./SpaceCards.module.css";
 import { ClipLoader } from "react-spinners";
 import { useSpace } from "../../context/SpaceContext";
+import { memo } from "react";
 
-function SpaceCards() {
+const SpaceCards = memo(function SpaceCards() {
   const { isLoading, spaces } = useSpace();
   if (isLoading)
     return (
@@ -22,6 +23,6 @@ function SpaceCards() {
       </ul>
     </div>
   );
-}
+});
 
 export default SpaceCards;
