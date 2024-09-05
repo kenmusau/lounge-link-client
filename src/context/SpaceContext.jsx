@@ -58,20 +58,23 @@ function SpaceProvider({ children }) {
     fetchSpaces();
   }, []);
 
-  const getSpace = useCallback(async function getSpace(id) {
-    // if (Number(id) === currentSpace.id) return;
-    dispatch({ type: "loading" });
-    try {
-      const res = await fetch(`${baseurl}/spaces/${id}`);
-      const data = await res.json();
-      dispatch({ type: "space/loaded", payload: data });
-    } catch {
-      dispatch({
-        type: "rejected",
-        payload: "There was error loading a spaces...",
-      });
-    }
-  }, []);
+  const getSpace = useCallback(
+    async function getSpace(id) {
+      if (Number(id) === currentSpace.id) return;
+      dispatch({ type: "loading" });
+      try {
+        const res = await fetch(`${baseurl}/spaces/${id}`);
+        const data = await res.json();
+        dispatch({ type: "space/loaded", payload: data });
+      } catch {
+        dispatch({
+          type: "rejected",
+          payload: "There was error loading a spaces...",
+        });
+      }
+    },
+    [currentSpace.id]
+  );
 
   const value = useMemo(() => {
     return { spaces, currentSpace, isLoading, getSpace };
